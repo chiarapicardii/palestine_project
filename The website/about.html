@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    /* Left side: content */
+    .content {
+      flex: 3;
+      padding: 40px;
+      margin-right: 270px;
+      line-height: 1.6;
+    }
+
+    /* Right side: index menu */
+    .sidebar {
+      position: fixed;          /* makes it stay in place */
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100vh;
+      padding: 40px 20px;
+      border-left: 2px solid #ccc;
+      background-color: #f9f9f9;
+      overflow-y: auto;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 12px;
+      color: #c8102e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Content -->
+  <div class="content">
+    <div class="section" id="intro">
+      <h2>1. Introduction</h2>
+      <p>This is where you describe the aim and scope of your project.</p>
+    </div>
+
+    <div class="section" id="research">
+      <h2>2. Research & Planning</h2>
+      <p>Summarize your preliminary research, tools used, or cultural questions posed.</p>
+    </div>
+
+    <div class="section" id="design">
+      <h2>3. Design Process</h2>
+      <p>Explain how you chose your structure, layout, and technology stack.</p>
+    </div>
+
+    <div class="section" id="development">
+      <h2>4. Development Steps</h2>
+      <p>Break down your development work step by step (e.g., HTML, CSS, interactivity).</p>
+    </div>
+
+    <div class="section" id="challenges">
+      <h2>5. Challenges & Solutions</h2>
+      <p>Write about any difficulties faced and how you solved them.</p>
+    </div>
+
+    <div class="section" id="reflection">
+      <h2>6. Final Reflection</h2>
+      <p>Reflect on what you learned and what could be improved in future iterations.</p>
+    </div>
+  </div>
+
+  <!-- Sidebar Index -->
+  <div class="sidebar">
+    <h3>Project Steps</h3>
+    <a href="#intro">1. Introduction</a>
+    <a href="#research">2. Research & Planning</a>
+    <a href="#design">3. Design Process</a>
+    <a href="#development">4. Development Steps</a>
+    <a href="#challenges">5. Challenges & Solutions</a>
+    <a href="#reflection">6. Final Reflection</a>
+  </div>
+</body>
+</html>
