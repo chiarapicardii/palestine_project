@@ -60,7 +60,7 @@ h2 {
 
 /* CSS on the galleries */
 
-#erasure-gallery{
+#erasure_gallery{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     gap: 0vw;
@@ -73,7 +73,7 @@ h2 {
     transition: 0.8s ease;
 }
 
-#resistance-gallery{
+#resistance_gallery{
     display:grid; 
     grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
     gap: 0
@@ -113,4 +113,95 @@ h2 {
     }
 }
 
+
+/* ANOTHER PAGE - TIMELINE */ 
+
+#timeline_intro {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+#chronological_timeline {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+#chronological_timeline::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    margin: auto;
+    width: 0.7vw;
+    background: white;
+    z-index: -2; 
+}
+
+.timeline_date{
+    width: 10vw;
+    margin: auto; 
+    background-color: green;
+    border-radius: 3vh;
+    font-size: 5vh;
+}
+
+.timeline_figure {
+    width: 50%;
+    display: block; 
+    border: 0.2vw solid #ffffff;
+    margin: 10% auto;
+}
+
+.timeline_figure img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.img_box{
+    position: relative;
+    display: block;
+}
+
+.overlay_content{
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    left:0; 
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    text-align: center; 
+    z-index: 1;
+}
+
+.img_box:hover .overlay_content{
+    opacity: 1;
+}
+
+h4{
+    margin-top: 25%;
+    margin-right: 12%;
+    margin-left: 12%;
+}
+
+.overlay_button{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius:1vw;
+    padding:1vw 2vw; 
+}
+
+a.overlay_button:hover {
+    background-color: white;
+    color: red;
+}
 
