@@ -5,28 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About the Project</title>
   <style>
+    :root {
+      --accent: #c8102e;
+      --border: #ccc;
+      --navbar-h: 60px;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
+      min-height: 100vh;
     }
 
-    /* Left side: content */
+    /* Sticky Top Navigation (same look as other pages) */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--navbar-h);
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      z-index: 1000;
+    }
+    .navbar .left, .navbar .right { display: flex; gap: 20px; }
+    .navbar .center { font-weight: bold; }
+    .navbar a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .navbar .center a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Content area */
     .content {
       flex: 3;
-      padding: 40px;
+      padding: calc(var(--navbar-h) + 40px) 40px 40px 40px; /* pushes below navbar */
       margin-right: 270px;
       line-height: 1.6;
     }
 
-    /* Right side: index menu */
+    /* Sidebar (right index) */
     .sidebar {
-      position: fixed;          /* makes it stay in place */
-      top: 0;
+      position: fixed;
+      top: var(--navbar-h);   /* start below navbar */
       right: 0;
       width: 250px;
-      height: 100vh;
+      height: calc(100vh - var(--navbar-h));
       padding: 40px 20px;
       border-left: 2px solid #ccc;
       background-color: #f9f9f9;
@@ -40,7 +75,7 @@
     .sidebar a {
       display: block;
       margin-bottom: 12px;
-      color: #c8102e;
+      color: var(--accent);
       text-decoration: none;
       font-weight: bold;
     }
@@ -57,9 +92,40 @@
       margin-top: 0;
       color: #333;
     }
+
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-top: 2px solid #ccc;
+      }
+      .content {
+        margin-right: 0;
+        padding: calc(var(--navbar-h) + 20px) 20px 20px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Sticky Navbar -->
+  <div class="navbar" role="navigation" aria-label="Main">
+    <div class="left">
+      <a href="about.html">Documentation</a>
+      <a href="#">About us</a>
+    </div>
+    <div class="center">
+      <a href="Palestine website.html" aria-label="Go to home">Steadfastness</a>
+    </div>
+    <div class="right">
+      <a href="#">Narratives</a>
+      <a href="objects.html">Objects</a>
+      <a href="#">Map</a>
+    </div>
+  </div>
+
   <!-- Main Content -->
   <div class="content">
     <div class="section" id="intro">
