@@ -27,7 +27,7 @@
       line-height: 1.5;
     }
 
-    /* Sticky Top Navigation */
+    /* Sticky Navigation */
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -51,7 +51,7 @@
       margin: 0 auto;
     }
 
-    /* Top block: image + metadata/details side-by-side */
+    /* Top block: image + metadata side by side */
     .item-section {
       display: flex;
       align-items: flex-start;
@@ -61,12 +61,12 @@
 
     .item-image {
       width: 100%;
-      max-width: 440px;           /* keeps it tidy */
-      height: 400px;              /* fixed frame height — adjust to your taste */
+      max-width: 440px;           
+      height: 400px;              /* fixed frame height */
       display: flex;              /* allows centering */
-      align-items: center;        /* vertical center */
-      justify-content: center;    /* horizontal center */
-      overflow: hidden;           /* hides overflow if image is larger */
+      align-items: center;        
+      justify-content: center;    
+      overflow: hidden;          
     }
     .item-image img {
       max-width: 100%;
@@ -84,7 +84,7 @@
     .metadata { margin: 0 0 20px; padding-left: 18px; }
     .metadata li { margin-bottom: 6px; }
 
-    /* Accordion section BELOW everything */
+    /* Accordion section */
     .accordion-section {
       margin-top: var(--content-gap);
     }
@@ -131,7 +131,7 @@
       display: block;
     }
 
-    /* Red navigation triangles */
+    /* navigation triangles */
     .arrow-left, .arrow-right {
       position: fixed;
       top: 50%;
@@ -186,7 +186,7 @@
 
   <!-- Main Content -->
   <main class="container">
-    <!-- TOP: image + metadata/details -->
+    <!-- image + metadata -->
     <section class="item-section">
       <figure class="item-image">
         <img src="my-image.jpg" alt="Item Image" />
@@ -203,7 +203,7 @@
       </div>
     </section>
 
-    <!-- BELOW: accordion spanning the full width -->
+    <!-- accordion -->
     <section class="accordion-section" aria-label="Item narratives">
       <h3 class="accordion-title">Narratives</h3>
       <div class="accordion" id="accordion">
@@ -240,7 +240,6 @@
   <div class="arrow-right" role="button" aria-label="Next item" tabindex="0"></div>
 
   <script>
-    // ===== Data (add your 15 items here) =====
     const items = [
       {
         image: "my-image.jpg",
@@ -500,7 +499,7 @@
       }
     ];
 
-    // Optional theme file per accordion key (replace with your real CSS file paths)
+    // theme file per accordion
     const themeFiles = {
       young_visitor: "theme-young visitor.css",
       adult_visitor:  "theme-adult visitor.css",
