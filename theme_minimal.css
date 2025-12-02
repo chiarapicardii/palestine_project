@@ -1,0 +1,126 @@
+/*Inspiration: SWISS STYLE (the grid system
+https://www.pixeldarts.com/post/swiss-style-web-design-a-comprehensive-guide) e FLAT DESIGN*/
+
+body {
+    color: black;
+    background-color:  rgb(219, 217, 217);
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 0; 
+    margin-right: 10vw;
+    padding-left: 1vw; 
+}
+ 
+h1{
+    text-align: left;
+    font-size: 24vh;
+    font-weight: 700;
+    margin-bottom: 1%
+}
+
+h2{
+    font-size: 10vh;
+    color:grey;
+    margin-top: 1%
+}
+
+.navbar {
+    background-color: rgb(219, 217, 217);
+}
+
+.navbar a { 
+    text-decoration: none; 
+    color: #017609; 
+    font-weight: bold;
+}
+
+#down_arrow {
+    display: none;
+}
+
+#themeSelector {
+    background: rgb(219, 217, 217);
+    color: white;
+    border-color: #017609;
+}
+
+/*GALLERYS*/
+
+#erasure,
+#resistance{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        width: 100%;
+        gap: 1vw;
+
+        align-items: end;
+    }  
+
+.erasure_img, 
+.resistent_img{
+    width: 100%;
+    height: 20vw;
+    object-fit: contain;
+}
+
+#erasure a,
+#resistance a{
+    text-align: center;
+}
+
+.timeline_item {
+    display: flex; 
+    flex-direction: row; 
+    
+    align-items: end; 
+    
+    gap: 5%;
+    margin: 5% auto; 
+    border-bottom: 1px solid #8e8c8c;
+}
+
+.timeline_date{
+    font-size: 10vw; 
+    font-weight: bold;
+    color: #017609;
+    align-self: end;
+    line-height: 0.8;
+}
+
+.timeline_figure {    
+    display: flex;   /*io ho diviso due flex: in uno figure e data e poi dentro figure un'ulteriore divisione*/ 
+    flex-direction: row; 
+    gap: 1%; 
+    align-items: end; 
+    margin: 0; /*to put in on the bottom like i want to */
+}
+
+.timeline_figure img{
+    width: 100%; 
+    height: 50vh; 
+    object-fit: contain; 
+    display: block;
+}
+
+.overlay_content{
+    text-align: left;
+}
+
+.overlay_button{
+        background-color: grey;
+        color: white;
+        text-decoration: none;
+        padding: 1vw 2vw; 
+        display: inline-block;
+    }
+
+a.overlay_button:hover {
+        background-color: white;
+        color: gray;
+    }
+
+
+
+
+

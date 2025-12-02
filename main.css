@@ -1,0 +1,57 @@
+/* CSS FOR EVERYTHING: ELEMENTS THAT DON'T CHANGE */
+
+/* CSS on the navbar */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: white;;     
+    justify-content:center;
+    padding-top: 60px;
+    } 
+
+
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000;
+    }
+
+.navbar .left,
+.navbar .right {
+    display: flex; gap: 20px; 
+    }
+
+.navbar .center {
+    font-weight: bold; 
+    }
+
+.navbar a { 
+    text-decoration: none; 
+    color: #c8102e; 
+    font-weight: bold; 
+}
+
+.theme_switch {
+    position: absolute;
+    top: 17%;
+    right: 2%;
+    padding: 1vw;
+}
+
+#themeSelector {
+    background: white;
+}
+
+.narration_p{
+    text-align: justify;
+}

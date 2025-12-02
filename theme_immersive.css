@@ -1,0 +1,196 @@
+/*Cinematic Web design: with a modernist approach https://academic.oup.com/iwc/advance-article/doi/10.1093/iwc/iwaf026/8246686#530959830  */
+/* CSS theme_immersive */
+
+body {
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+.navbar {
+        background-color: black;
+        }
+
+
+#themeSelector {
+    border-radius: 10vw;
+    background: black;
+    color: white;
+    border-color: #c8102e;
+    border-radius: 2vw;
+}
+
+.narration_p{
+    margin-left: 5%;
+    margin-right: 5%
+}
+
+h1 {
+        font-size: 10vw;
+        margin-top: 10vh;
+        margin-bottom: 8vh; 
+    }
+
+h2 {
+        font-size: 3.5vw;
+    }
+
+#down_arrow {
+        display: block;
+        margin: 3vw auto 5vw auto;
+        width: 10vw;
+        height: 10vw;
+        cursor: pointer; 
+        animation: pointing 2s ease-out;
+    }
+
+#down_arrow img{
+        width: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+#down_arrow:hover{
+        transform: translateY(5px) scale(1.1)
+    }
+
+/* CSS on the introduction */
+
+#introduction{
+        position: relative;
+        min-height: 100vh; 
+
+        background-image: url(imgs/prova.jpg);
+        background-size: cover;
+    }
+
+#intro_section {
+    position: absolute; /* this makes sense only if the #intro is relative, otherwise the top:0% will work accoring to the whole viewport not just the section */
+    width: 30%; 
+    height: auto;
+    background-color: rgba(200, 16, 46, 0.7);
+    top: 10%;
+    padding: 2%;
+    right: 5%;
+    text-align: left;
+}
+
+/* CSS on the galleries */
+#erasure_intro,
+#resistance_intro{
+    margin: 5%;
+    text-align: justify;
+} 
+
+#erasure,
+#resistance{
+        display: grid;
+        grid-template-columns: 1fr;
+    }  
+
+.erasure_img,
+.resistent_img{
+    width: 70%;
+    height: calc(100vh - 60px);
+    object-fit: contain;
+    filter: contrast(100%) sepia(0%);
+    transition: 0.8s ease;
+    }
+
+
+.erasure_img:hover, 
+.resistent_img:hover {
+    filter: contrast(60%) sepia(100%); 
+    cursor: pointer;
+}
+
+.is_hidden {
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade_in{
+    opacity: 1; 
+    transform: translateY(0);
+    transition: opacity 1.5s ease-in;
+}
+
+
+/* ANOTHER PAGE - TIMELINE */ 
+
+#timeline_intro {
+    text-align: center;
+    padding: 2em 1em;
+    }
+
+#chronological_timeline {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    }
+
+
+.timeline_date{
+        width: 20vw;
+        margin: auto; 
+        background-color: red;
+        border-radius: 3vh;
+        font-size: 10vh;
+    }
+
+.timeline_figure{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.timeline_figure img{
+        width: 70%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+
+.overlay_content{
+        position: absolute; 
+        top: 0; 
+        bottom: 0;
+        left:0; 
+        right: 0;
+
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+
+        opacity: 0; 
+        transition: opacity 0.3s ease; 
+        text-align: center; 
+        z-index: 1;
+    }
+
+.timeline_figure:hover .overlay_content{
+        opacity: 1;
+    }
+
+h4{
+        margin-top: 25%;
+        margin-right: 12%;
+        margin-left: 12%;
+    }
+
+.overlay_button{
+        background-color: red;
+        color: white;
+        text-decoration: none;
+        border-radius: 1vw;
+        padding: 1vw 2vw; 
+    }
+
+a.overlay_button:hover {
+        background-color: white;
+        color: red;
+    }
+
+.timeline_column_description{
+    visibility: hidden;
+}

@@ -6,33 +6,29 @@
         <link rel="icon" type="image/png" href="imgs/palestine_flag.png">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="stylesheet" type="text/css" href="main.css"> 
+        <link rel="stylesheet" type="text/css" href="" id="themeStyle" disabled> 
         <script language="javascript", src="script.js"> </script>
 
     </head>
 
     <body>
         <header> 
-            <a href="#home"> 
-                <img src="imgs\Animated-Flag-Palestine.webp" alt="palestitian flag" id="navbar_logo">
-            </a>
-
+        
             <!-- Navbar -->
-            <div class="navbar">
-
-                <a href="#collection"> Collection </a>
-                <a href="#map"> Map </a>
-                <div class="subnav"> 
-                    <button class="subnav_button"> Narrations </button>
-                    <div class="subnav_content"> 
-                    <a href="#Narration1" id="narration1"> Memory as resistance </a>
-                    <a href="#timeline" id="timeline"> Timeline </a>     
-                    </div>
-                </div>
-                <a href="#aboutus"> About us </a>
-                <a href="documentation"> Documentation </a>
-                </div>
+        <div class="navbar" role="navigation" aria-label="Main">
+            <div class="left">
+            <a href="#">Documentation</a>
+            <a href="#">About us</a>
             </div>
+            <div class="center">Steadfastness</div>
+            <div class="right">
+            <a href="narratives.html">Narratives</a>
+            <a href="#">Objects</a>
+            <a href="#">Map</a>
+            </div>
+        </div>
+
         </header>
         
         <section id="timeline_intro">
@@ -40,23 +36,234 @@
             <p> probably introduction </p>
         </section>
 
+
+        <section class="theme_switch">
+            <select id="themeSelector" onchange="applyTheme(this.value)"> 
+                <option value="immersive"> 👁️ Immersive style </option>
+                <option value="minimal"> 📖 Minimal style </option>
+            </select>
+        </section>
+
         <section id="chronological_timeline"> 
 
             <div class="timeline_item"> 
                 
-                <div class="timeline_date"> 1400 </div>
-                <figure class="timeline_figure img_box"> 
+                <div class="timeline_date is_hidden" > 1936 </div>
+                <figure class="timeline_figure is_hidden"> 
                         
-                    <img class="erasure_img" src="imgs\img1(1941).jpg" alt="some text">  
+                    <img class="erasure_img" src="imgs\img1_(1936).jpg" alt="some text">  
+                        <div class="overlay_content timeline_description"> 
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        </div>   
+                </figure>
+            </div>
+        
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1948 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img2_(1948).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item is_hidden"> 
+                
+                <div class="timeline_date"> 1948 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img3_(1948).jpg" alt="some text">  
                         <div class="overlay_content"> 
 
                             <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
                             <a href="#" class="overlay_button"> More information</a>
                         
-                        </div>
-                    
+                        </div>   
                 </figure>
             </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1964 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img4_(1964).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        </div>   
+                        
+                </figure>
+            </div>
+
+            <div class="timeline_item is_hidden"> 
+                
+                <div class="timeline_date is_hidden"> 1967 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img5(1967).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1973 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img6_(1973).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1974 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img7_(1974).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1980 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img8_(1980).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1983 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img9_(1983).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1984 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img10_(1984).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1988 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img11_(1988).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1989 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img12_(1989).jpg" alt="some text">  
+                    <div class="overlay_content"> 
+                        <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                        <a href="#" class="overlay_button"> More information</a>
+                    </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1990s </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img13_(1990s).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1990s </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img14_(1990s).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
+            <div class="timeline_item"> 
+                
+                <div class="timeline_date is_hidden"> 1999 </div>
+                <figure class="timeline_figure is_hidden"> 
+                        
+                    <img class="erasure_img" src="imgs\img15_(1999).jpg" alt="some text">  
+                        <div class="overlay_content"> 
+
+                            <h4>Anzac Celebration, Ap. 25, 1941 at war cemetery.</h4>
+                            <a href="#" class="overlay_button"> More information</a>
+                        
+                        </div>   
+                </figure>
+            </div>
+
         </section>
 
     </body>
