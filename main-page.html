@@ -48,6 +48,28 @@
     .navbar a{ text-decoration:none; color:var(--accent); font-weight:bold; }
     .navbar .center a{ color:inherit; text-decoration:none; cursor:pointer; }
 
+    /* Mobile navbar fix */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 12px;          /* less side padding */
+  }
+
+  .navbar .left,
+  .navbar .right {
+    gap: 10px;                /* smaller gaps between links */
+  }
+
+  .navbar a {
+    font-size: 0.7rem;        /* shrink link text */
+    font-weight: 600;         /* still readable, just less bulky */
+  }
+
+  .navbar .center {
+    font-size: 0.9rem;        /* title slightly bigger than links */
+  }
+}
+
+
 
     .stage{
       width:100%;
@@ -133,5 +155,6 @@
   </footer>
 </body>
 </html>
+
 
 
