@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Objects Page</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="icon" type="image/png" href="imgs/palestine_flag.png">
+  <title>Objects</title>
 
   <style>
     :root {
-      --accent: #c8102e;
+      --pa-red: #c8102e;
       --text: #222;
       --bg: #fff;
-      --muted: #f7f7f7;
       --border: #ccc;
       --navbar-h: 60px;
       --content-gap: 40px;
@@ -38,9 +37,9 @@
       padding: 0 30px;
       z-index: 1000;
     }
-    .navbar .left, .navbar .right { display: flex; gap: 20px; }
-    .navbar .center { font-weight: bold; }
-    .navbar a { text-decoration: none; color: var(--accent); font-weight: bold; }
+    .navbar .left, .navbar .right{ display:flex; gap:20px; }
+    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; cursor:pointer; }
+    .navbar .center a{ color:var(--text); }
 
     /* Main container */
     .container {
@@ -61,23 +60,23 @@
       width: 100%;
       max-width: 440px;           
       height: 400px;              
-      display: flex;              
+      display: flex;            
       align-items: center;        
       justify-content: center;    
-      overflow: hidden;           /* hiding overflow if image is larger */
     }
+
     .item-image img {
       max-width: 100%;
       max-height: 100%;
-      object-fit: contain;        /* shows entire image */
-      object-position: center;
+      object-fit: contain;
       display: block;
     }
 
     .item-details {
-      flex: 1 1 360px;
-      min-width: 320px;
+      flex: 1 1 200px;
+      min-width: 180px;
     }
+
     .item-details h2 { margin: 0 0 10px; }
     .metadata { margin: 0 0 20px; padding-left: 18px; }
     .metadata li { margin-bottom: 6px; }
@@ -101,7 +100,7 @@
     }
     .accordion-header {
       width: 100%;
-      background: var(--muted);
+      background:#f7f7f7;
       border: 0;
       padding: 14px 16px;
       text-align: left;
@@ -130,65 +129,77 @@
     }
 
     /* Red navigating triangles */
+    .arrow-left::before { content: "◀"; }
+    .arrow-right::before { content: "▶"; }
+
     .arrow-left, .arrow-right {
       position: fixed;
+      color: var(--pa-red);
       top: 50%;
       transform: translateY(-50%);
-      width: 0; height: 0;
-      border-style: solid;
+      font-size: 40px;
       cursor: pointer;
       z-index: 1000;
+      user-select: none;
     }
-    .arrow-left {
-      left: 30px;
-      border-width: 15px 20px 15px 0;
-      border-color: transparent var(--accent) transparent transparent;
-    }
-    .arrow-right {
-      right: 30px;
-      border-width: 15px 0 15px 20px;
-      border-color: transparent transparent transparent var(--accent);
-    }
+    .arrow-left { left: 30px; }
+    .arrow-right { right: 30px; }
+
 
     .footer {
       background: #111;
-      color: #fff;
+      color: #444;
       text-align: center;
       padding: 20px;
       margin-top: 80px;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
       .container { padding: calc(var(--navbar-h) + 24px) 16px 60px; }
       .arrow-left { left: 12px; }
       .arrow-right { right: 12px; }
+      .navbar {
+      padding: 0 12px;
+      }
+
+      .navbar .left,
+      .navbar .right {
+      gap: 10px;
+      }
+
+      .navbar a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      }
     }
+    
   </style>
   <link id="themeStylesheet" rel="stylesheet" href="" disabled>
 </head>
+
 <body>
-  <!-- Sticky Navbar -->
+  <!-- sticky navbar -->
   <div class="navbar" role="navigation" aria-label="Main">
     <div class="left">
       <a href="documentation.html">Documentation</a>
       <a href="about-us.html">About us</a>
     </div>
     <div class="center">
-      <a href="main-page.html" aria-label="Go to home">Steadfastness</a>
+      <a href="main-page.html" aria-label="Go to homepage">Steadfastness</a>
     </div>
     <div class="right">
-      <a href="#">Narratives</a>
+      <a href="narratives.html">Narratives</a>
       <a href="objects.html">Objects</a>
       <a href="#">Map</a>
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- main content -->
   <main class="container">
-    <!-- top part: image + metadata -->
+    <!-- image and metadata -->
     <section class="item-section">
       <figure class="item-image">
-        <img src="my-image.jpg" alt="Item Image" />
+        <img src="imgs/my-image.jpg" alt="Item Image" />
       </figure>
 
       <div class="item-details">
@@ -202,7 +213,7 @@
       </div>
     </section>
 
-    <!-- bottom part: full width accordion -->
+    <!-- accordion section -->
     <section class="accordion-section" aria-label="Item narratives">
       <h3 class="accordion-title">Narratives</h3>
       <div class="accordion" id="accordion">
@@ -229,20 +240,24 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Palestinian graduate student Museum. All rights reserved.
-  </footer>
-
-  <!-- Red triangles -->
+  <!--navigation triangles-->
   <div class="arrow-left" role="button" aria-label="Previous item" tabindex="0"></div>
   <div class="arrow-right" role="button" aria-label="Next item" tabindex="0"></div>
+
+  <!-- footer -->
+  <footer class="footer"> 
+    <p class="disclaimer"> <em>Disclaimer</em>: The purpose of this web site is to explore various types of typographic and layout style for museum pages, 
+    as an end-of-course project for the "Information Modeling and Web technologies" course of the Master Degree in 
+    Digital Humanities and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali. </p> 
+    <p class="copyright"> All copyrights and related rights on the content remain with their original owners. 
+    All copyright on the typographic and layout choices are 2025 © Steadfastness</p>
+  </footer>
 
   <script>
     // items
     const items = [
       {
-        image: "my-image.jpg",
+        image: "imgs/my-image.jpg",
         title: "Our Cause",
         metadata: [
           "Type: Poster",
@@ -258,7 +273,7 @@
         }
       },
       {
-        image: "image 2.jpg",
+        image: "imgs/image 2.jpg",
         title: "Al-Miqla' Magazine",
         metadata: [
           "Type: Magazine",
@@ -274,7 +289,7 @@
         }
       },
       {
-        image: "image 3.jpg",
+        image: "imgs/image 3.jpg",
         title: "Camel of Heavy Burdens_'Carry on'",
         metadata: [
           "Type: Poster",
@@ -290,7 +305,7 @@
         }
       },
       {
-        image: "image 4.jpg",
+        image: "imgs/image 4.jpg",
         title: "War and Peace",
         metadata: [
           "Type: Poem",
@@ -306,7 +321,7 @@
         }
       },
       {
-        image: "image 5.jpg",
+        image: "imgs/image 5.jpg",
         title: "30 March, the Day of the Land",
         metadata: [
           "Type: Poster",
@@ -322,7 +337,7 @@
         }
       },
       {
-        image: "image 6.jpg",
+        image: "imgs/image 6.jpg",
         title: "Steadfastness",
         metadata: [
           "Type: Poster",
@@ -338,23 +353,7 @@
         }
       },
       {
-        image: "image 7.jpg",
-        title: "He Who Plunders Others Always Lives in Terror",
-        metadata: [
-          "Type: Poster",
-          "Date: 1975",
-          "Creator: Organization of Solidarity with the Peoples of Asia, Africa and Latin America (OSPAAAL)",
-          "Collection: Palestinian Museum Digital Archive, Item 16482"
-        ],
-        narratives: {
-          young_visitor: "This poster shows a huge wooden horse painted with the U.S. flag. From inside the horse, tiny soldiers carrying another flag are coming out. It comes from the story of the Trojan Horse, when an army hid inside a wooden horse to fool their enemies. The artist used this old story to show something new: how one country can use another to do harm. The words at the top say, “He Who Plunders Others Always Lives in Terror.” It means that people who steal or hurt others can never feel peaceful. The artist made this picture to remind us that being fair and kind is stronger than lies and power.",
-          adult_visitor: "Titled “He Who Plunders Others Always Lives in Terror,” this poster was created by the Organization of Solidarity with the Peoples of Asia, Africa and Latin America (OSPAAAL) in Havana during the mid-1970s. The artwork depicts a wooden Trojan Horse decorated with the U.S. flag, from which miniature Israeli soldiers emerge. The design turns the ancient myth into a modern warning: Israel appears as the Trojan Horse of U.S. imperialism in the Middle East. The proverb, printed in Arabic, Spanish, French, and English, is described as Palestinian, and its message, that those who plunder others are consumed by fear, conveys a universal moral. The piece reflects the global solidarity between revolutionary movements and the Palestinian struggle for liberation.",
-          graduate_student: "The poster “He Who Plunders Others Always Lives in Terror” (1975) is a quintessential example of tricontinental revolutionary art. Produced by OSPAAAL in Havana, it situates the Palestinian question within the global framework of anti-imperialist struggle. The visual metaphor, a U.S.-flagged Trojan Horse releasing Israeli troops, fuses classical myth with Cold War political symbolism. It presents Israel as the hidden instrument of American power in the Arab world, dramatizing how imperialism operates through deceit and proxy. The proverb, printed in four languages, embodies OSPAAAL’s mission to connect liberation movements across Asia, Africa, and Latin America. Distributed globally through Tricontinental magazine, the poster’s multilingual design turned political art into a medium of shared resistance. Visually, its crafted wood textures, staged lighting, and miniature soldiers evoke a theatrical allegory: a world of power plays and illusions. Within Palestinian poster history, it stands as a transnational extension of the resistance aesthetic, merging Latin American revolutionary design with Arab anti-colonial meaning.",
-          field_expert: "OSPAAAL’s “He Who Plunders Others Always Lives in Terror” (Havana, 1975) embodies the visual discourse of tricontinentalism, a Cold War solidarity ideology uniting liberation movement across the Global South. The poster’s use of the Trojan Horse allegory encodes a dual critique: U.S. imperial power disguised as friendship and Israel’s role as its military extension in the Middle East. The horse, rendered in geometric wooden forms bearing the American insignia, conceals miniature Israeli soldiers descending onto desert terrain, a metaphor for proxy warfare and occupation. The multilingual inscription “He Who Plunders Others Always Lives in Terror”, operates as both political slogan and moral axiom. Presented in Arabic, Spanish, French, and English, it materializes OSPAAAL’s translingual strategy of global communication. The phrase, identified as a Palestinian proverb, inverts colonial hierarchies of fear: the oppressor becomes the haunted subject, recalling Frantz Fanon’s reflections on the colonizer’s anxiety in “The Wretched of the Earth.” As an object, the poster merges propaganda and fine art. Its staged composition, meticulously photographed rather than painted, demonstrates OSPAAAL’s sophisticated use of set design to produce political allegory. By circulating through Tricontinental magazine, the work joined what David Kunzle calls a “visual postal network of revolution,” transmitting aesthetic and ideological solidarity across continents. In Palestinian visual historiography, it signifies the global diffusion of sumud (steadfastness) as a visual ethic: resistance not through weapons but through image, memory, and transnational alliance. Now preserved in the Palestinian Museum Digital Archive, the poster remains a vital record of how global visual culture reinforced the moral and political foundations of the Palestinian cause."
-        }
-      },
-      {
-        image: "image 8.jpg",
+        image: "imgs/image 7.jpg",
         title: "Hisham Halwani and Others, 1964",
         metadata: [
           "Type: Photograph",
@@ -370,7 +369,7 @@
         }
       },
       {
-        image: "image 9.jpg",
+        image: "imgs/image 8.jpg",
         title: "Clashes between a Child and the Occupation Forces in Al-Bireh",
         metadata: [
           "Type: Photograph",
@@ -386,7 +385,7 @@
         }
       },
       {
-        image: "image 10.jpg",
+        image: "imgs/image 9.jpg",
         title: "Arab Revolt (1936–1939) – Military Band leaving the Jerusalem War Cemetery (Mount Scopus), Armistice Day",
         metadata: [
           "Type: Photograph",
@@ -402,7 +401,7 @@
         }
       },
       {
-        image: "image 11.jpg",
+        image: "imgs/image 10.jpg",
         title: "We Have Our Heritage and Civilisation",
         metadata: [
           "Type: Poster",
@@ -418,7 +417,7 @@
         }
       },
       {
-        image: "image 12.jpg",
+        image: "imgs/image 11.jpg",
         title: "Palestinian Refugees (1948)",
         metadata: [
           "Type: Photograph",
@@ -434,7 +433,7 @@
         }
       },
       {
-        image: "image 13.jpg",
+        image: "imgs/image 12.jpg",
         title: "Palestine Refugees Flee across the Allenby Bridge during the 1967 Hostilities",
         metadata: [
           "Type: Photograph",
@@ -450,7 +449,7 @@
         }
       },
       {
-        image: "image 14.jpg",
+        image: "imgs/image 13.jpg",
         title: "Members from Ayyash Family Eating Food",
         metadata: [
           "Type: Photograph",
@@ -466,7 +465,7 @@
         }
       },
       {
-        image: "image 15.jpg",
+        image: "imgs/image 14.jpg",
         title: "Children Festival",
         metadata: [
           "Type: Photograph",
@@ -482,7 +481,7 @@
         }
       },
       {
-        image: "image 16.jpg",
+        image: "imgs/image 15.jpg",
         title: "A Scene from Daily Life, Beirut",
         metadata: [
           "Type: Photograph",
@@ -508,9 +507,9 @@
     };
 
     let currentIndex = 0;
-    let currentPanelKey = null; // keeping selected panel across items
+    let currentPanelKey = null;
 
-    //what I added 
+    // Chiara's
     const urlParams = new URLSearchParams(window.location.search);
     const itemParam = urlParams.get('item');
     if (itemParam !== null) {
@@ -519,7 +518,6 @@
         currentIndex = index;
       }
     }
-
 
     // DOM refs
     const imgEl = document.querySelector(".item-image img");
@@ -628,5 +626,4 @@
   </script>
 </body>
 </html>
-
 
