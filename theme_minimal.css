@@ -6,23 +6,22 @@ body {
     background-color:  rgb(219, 217, 217);
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
-
-    margin: 0; 
-    margin-right: 10vw;
-    padding-left: 1vw; 
+    overflow-x: hidden;
 }
  
 h1{
     text-align: left;
     font-size: 24vh;
     font-weight: 700;
-    margin-bottom: 1%
+    margin-bottom: 1%;
+    padding-left: 1vw
 }
 
 h2{
     font-size: 10vh;
     color:grey;
-    margin-top: 1%
+    margin-top: 1%;
+    padding-left: 1vw
 }
 
 .navbar {
@@ -45,16 +44,35 @@ h2{
     border-color: #017609;
 }
 
+#narration_page{
+    margin-right: 10vw;
+    padding-left: 1vw
+}
+
+.narration_p a{
+    color: #017609;
+}
+
+.source:hover{
+    color:  #017609
+}
 /*GALLERYS*/
+
+#introduction,
+#introduction ~ *,
+#introduction ~ * figure {
+    margin-right: 10vw;
+    padding-left: 1vw
+}
 
 #erasure,
 #resistance{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
-        width: 100%;
+        width: 95%;
         gap: 1vw;
 
-        align-items: end;
+        align-items: start;
     }  
 
 .erasure_img, 
@@ -62,49 +80,78 @@ h2{
     width: 100%;
     height: 20vw;
     object-fit: contain;
+    transition: 1s
+}
+
+.erasure_img:hover, 
+.resistent_img:hover{
+    transform: scale(1.2);
 }
 
 #erasure a,
 #resistance a{
     text-align: center;
+    text-decoration: none;
+    color: grey;
+}
+
+figcaption:hover {
+    color:#017609;
+}
+
+/*timeline*/
+#timeline_intro p{
+    padding-left: 2vw; 
+    margin-right: 10vw
+}
+
+#chronological_timeline {
+    display: flex;
+    flex-direction: row; 
+    
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    
+    white-space: nowrap; 
+    
+    width: 100%;   
 }
 
 .timeline_item {
-    display: flex; 
-    flex-direction: row; 
+    /* Impedisce agli elementi di rimpicciolirsi quando lo spazio si esaurisce */
+    flex-shrink: 0; 
+    position: relative;
     
-    align-items: end; 
+    width: 250px; 
     
-    gap: 5%;
-    margin: 5% auto; 
-    border-bottom: 1px solid #8e8c8c;
+    margin-right: 30px; 
+    
+    display: block; 
+    text-align: center;
 }
 
-.timeline_date{
-    font-size: 10vw; 
+.timeline_date {
+    font-size: 6vw;
     font-weight: bold;
-    color: #017609;
-    align-self: end;
-    line-height: 0.8;
+    color:  #017609
 }
 
-.timeline_figure {    
-    display: flex;   /*io ho diviso due flex: in uno figure e data e poi dentro figure un'ulteriore divisione*/ 
-    flex-direction: row; 
-    gap: 1%; 
-    align-items: end; 
-    margin: 0; /*to put in on the bottom like i want to */
-}
-
-.timeline_figure img{
-    width: 100%; 
-    height: 50vh; 
-    object-fit: contain; 
-    display: block;
-}
-
-.overlay_content{
+.overlay_content {
+    background-color: #8e8c8c82;  
+    color: white;
     text-align: left;
+    padding: 1vw; 
+    width: fit-content;
+    opacity: 0; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.timeline_figure:hover .overlay_content {
+    opacity: 1; 
+}
+
+.timeline_figure:hover img {
+    opacity: 0.7; 
 }
 
 .overlay_button{
@@ -118,9 +165,17 @@ h2{
 a.overlay_button:hover {
         background-color: white;
         color: gray;
-    }
+}
 
+section#disclaimer {
+    padding-left: 1vw;
+    margin-right: 10vw;
+}
 
+.footer{
+    color: grey
+}
 
-
-
+.disclaimer{
+    margin-right: 10vw;
+}

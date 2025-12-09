@@ -5,6 +5,7 @@ body {
     color: white;
     background-color: black;
     text-align: center;
+    font-family: Georgia, serif;
 }
 
 
@@ -21,49 +22,68 @@ body {
     border-radius: 2vw;
 }
 
+#narration_page ul{
+    text-align: left;
+    margin-left: 3%;
+}
+
 .narration_p{
     margin-left: 5%;
     margin-right: 5%
 }
 
+.narration_p a{
+    color: #c8102e;
+}
+
+.source:hover{ 
+    color:#c8102e
+}
+
 h1 {
-        font-size: 10vw;
-        margin-top: 10vh;
-        margin-bottom: 8vh; 
-    }
+    text-align: center;
+    font-size: 8vw;
+    margin-top: 10vh;
+    margin-bottom: 8vh; 
+}
 
 h2 {
-        font-size: 3.5vw;
-    }
+    font-size: 3.5vw;
+    font-style: italic;
+}
+
+h3{
+    font-size: 3vw;
+}
 
 #down_arrow {
-        display: block;
-        margin: 3vw auto 5vw auto;
-        width: 10vw;
-        height: 10vw;
-        cursor: pointer; 
-        animation: pointing 2s ease-out;
-    }
+    display: block;
+    margin: 3vw auto 5vw auto;
+    width: 15vw;
+    height: 10vw;
+    cursor: pointer; 
+    animation: pointing 2s ease-out;
+}
 
 #down_arrow img{
-        width: 100%;
-        object-fit: contain;
-        display: block;
-    }
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
 
 #down_arrow:hover{
-        transform: translateY(5px) scale(1.1)
-    }
+    transform: translateY(5px) scale(1.1)
+}
 
 /* CSS on the introduction */
 
 #introduction{
-        position: relative;
-        min-height: 100vh; 
+    position: relative;
+    min-height: 100vh; 
 
-        background-image: url(imgs/prova.jpg);
-        background-size: cover;
-    }
+    background-image: url(imgs/idf_burning.jpg);
+    background-size: cover;
+}
 
 #intro_section {
     position: absolute; /* this makes sense only if the #intro is relative, otherwise the top:0% will work accoring to the whole viewport not just the section */
@@ -76,18 +96,23 @@ h2 {
     text-align: left;
 }
 
+#intro_section a {
+    color: white;
+}
+
 /* CSS on the galleries */
 #erasure_intro,
 #resistance_intro{
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     text-align: justify;
 } 
 
 #erasure,
 #resistance{
-        display: grid;
-        grid-template-columns: 1fr;
-    }  
+    display: grid;
+    grid-template-columns: 1fr;
+}  
 
 .erasure_img,
 .resistent_img{
@@ -96,8 +121,21 @@ h2 {
     object-fit: contain;
     filter: contrast(100%) sepia(0%);
     transition: 0.8s ease;
-    }
+}
 
+#erasure a,
+#resistance a{
+    text-decoration: none;
+}
+
+#erasure figcaption,
+#resistance figcaption{
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
 
 .erasure_img:hover, 
 .resistent_img:hover {
@@ -117,29 +155,27 @@ h2 {
     transition: opacity 1.5s ease-in;
 }
 
-
 /* ANOTHER PAGE - TIMELINE */ 
 
 #timeline_intro {
-    text-align: center;
-    padding: 2em 1em;
-    }
+    text-align: justify;
+    padding: 2em 2em;
+}
 
 #chronological_timeline {
     position: relative;
     width: 90%;
     margin: auto;
     position: relative;
-    }
-
+}
 
 .timeline_date{
-        width: 20vw;
-        margin: auto; 
-        background-color: red;
-        border-radius: 3vh;
-        font-size: 10vh;
-    }
+    width: 20vw;
+    margin: auto; 
+    background-color: red;
+    border-radius: 3vh;
+    font-size: 10vh;
+}
 
 .timeline_figure{
     margin-left: 0;
@@ -147,50 +183,57 @@ h2 {
 }
 
 .timeline_figure img{
-        width: 70%;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-    }
+    width: 70%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
 .overlay_content{
-        position: absolute; 
-        top: 0; 
-        bottom: 0;
-        left:0; 
-        right: 0;
+    position: absolute; 
+    top: 0; 
+    bottom: 0;
+    left:0; 
+    right: 0;
 
-        background-color: rgba(0, 0, 0, 0.85);
-        color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
 
-        opacity: 0; 
-        transition: opacity 0.3s ease; 
-        text-align: center; 
-        z-index: 1;
-    }
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    text-align: center; 
+    z-index: 1;
+}
 
 .timeline_figure:hover .overlay_content{
-        opacity: 1;
-    }
+    opacity: 1;
+}
 
 h4{
-        margin-top: 25%;
-        margin-right: 12%;
-        margin-left: 12%;
-    }
+    margin-top: 25%;
+    margin-right: 12%;
+    margin-left: 12%;
+}
 
 .overlay_button{
-        background-color: red;
-        color: white;
-        text-decoration: none;
-        border-radius: 1vw;
-        padding: 1vw 2vw; 
-    }
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 1vw;
+    padding: 1vw 2vw; 
+}
 
 a.overlay_button:hover {
-        background-color: white;
-        color: red;
-    }
+    background-color: white;
+    color: red;
+}
 
 .timeline_column_description{
     visibility: hidden;
+}
+
+.disclaimer, 
+.copyright{
+    color: grey;
+    margin-left: 5%;
+    margin-right: 5%
 }

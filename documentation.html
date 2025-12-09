@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About the Project</title>
+  <title>Documentation: Steadfastness Project</title>
   <style>
     :root {
       --accent: #c8102e;
@@ -12,6 +12,11 @@
     }
 
     * { box-sizing: border-box; }
+
+    html{ 
+      scroll-behavior: smooth; 
+      scroll-padding-top: calc(var(--navbar-h) + 20px);
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -92,7 +97,22 @@
       margin-top: 0;
       color: #333;
     }
+    
+    /* biliography */
 
+    .source_list li {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px dotted #eee; 
+    }
+
+    .source_list cite {
+        display: block;
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+
+    
     @media (max-width: 900px) {
       body { flex-direction: column; }
       .sidebar {
@@ -110,8 +130,7 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Navbar -->
-  <div class="navbar" role="navigation" aria-label="Main">
+    <div class="navbar" role="navigation" aria-label="Main">
     <div class="left">
       <a href="documentation.html">Documentation</a>
       <a href="about-us.html">About us</a>
@@ -120,14 +139,15 @@
       <a href="main-page.html" aria-label="Go to home">Steadfastness</a>
     </div>
     <div class="right">
-      <a href="#">Narratives</a>
+      <a href="narratives.html">Narratives</a>
       <a href="objects.html">Objects</a>
       <a href="#">Map</a>
     </div>
   </div>
 
-  <!-- Main Content -->
-  <div class="content">
+    <div class="content">
+    <h1>Progetto MMMM: Documentazione Tecnica</h1>
+    
     <div class="section" id="intro">
       <h2>1. Introduction</h2>
       <p>This is where you describe the aim and scope of your project.</p>
@@ -137,10 +157,10 @@
       <h2>2. Research & Planning</h2>
       <p>Summarize your preliminary research, tools used, or cultural questions posed.</p>
     </div>
-
+    
     <div class="section" id="design">
-      <h2>3. Design Process</h2>
-      <p>Explain how you chose your structure, layout, and technology stack.</p>
+        <h2>3. Design Process (Deliberate Design)</h2>
+        <p>Explain how you chose your structure, layout, and technology stack. (Qui andrà la giustificazione dei temi Immersive e Minimal).</p>
     </div>
 
     <div class="section" id="development">
@@ -157,10 +177,77 @@
       <h2>6. Final Reflection</h2>
       <p>Reflect on what you learned and what could be improved in future iterations.</p>
     </div>
+    
+    <div class="section" id="bibliography">
+      <h2 id="sources_heading">7. Bibliography </h2>
+      <p>Elenco completo e navigabile delle fonti citate all'interno della narrazione "Memory as resistance" (story.html).</p>
+
+      <ol class="source_list">
+            
+            <li id="source_1"> 
+                <cite>Ghaddar JJ, Lowry J. (2024). 76 years later: a documentary Nakba. Ramparts: Barricade Journal.</cite> 
+                <a href="https://barricadejournal.org/ramparts/76-years-later-a-documentary-nakba/" target="_blank"> https://barricadejournal.org/ramparts/76-years-later-a-documentary-nakba/ </a>
+            </li>
+            
+            <li id="source_2"> 
+                <cite>Sami Abu Shehadeh and Fadi Shbaytah.(2008/2009). "Jaffa: From eminence to ethnic cleansing", Al Majdal 39/40.</cite> 
+                <span class="no-link"> (link not available) </span> 
+            </li>
+
+            <li id="source_3"> 
+                <cite>Khalidi, W. (1992). All that Remains: The Palestinian Villages Occupied and Depopulated by Israel in 1948.</cite> 
+                <a href="https://www.palestine-studies.org/en/node/1649445" target="_blank">https://www.palestine-studies.org/en/node/1649445</a>
+            </li>
+
+            <li id="source_4"> 
+                <cite>Hamdan Taha.(2024). Destruction of Cultural Heritage in Gaza; "Israeli Damage to Archives, Libraries, and Museums in Gaza", LAP Report.</cite> 
+                <a href="https://librarianswithpalestine.org/wp-content/uploads/2024/02/LAP-Gaza-Report-2024.pdf" target="_blank"> https://librarianswithpalestine.org/wp-content/uploads/2024/02/LAP-Gaza-Report-2024.pdf</a>
+            </li>
+            
+            <li id="source_5"> 
+                <cite>Ghaddar, J.J.(2025). Palestine as provenance: archiving against genocide from Gaza to South Lebanon (Jabal Amil). Arch Sci 25, 20.</cite> 
+                <a href="https://doi.org/10.1007/s10502-025-09484-y" target="_blank"> https://doi.org/10.1007/s10502-025-09484-y</a>
+            </li>
+            
+            <li id="source_6"> 
+                <cite>Said, E. (1984). Permission to Narrate. Journal of Palestine Studies, 13(3), 27–48.</cite> 
+                <a href="https://doi.org/10.2307/2536688" target="_blank"> https://doi.org/10.2307/2536688</a>
+            </li>
+
+            <li id="source_7"> 
+                <cite>IPS Washington. (2020, 20th of May). Nakba 1948: Ethnic cleansing of cities, towns and villages. Institute for Palestine Studies.</cite> 
+                <a href="https://www.palestine-studies.org/en/node/1650102/16501011" target="_blank">https://www.palestine-studies.org/en/node/1650102/16501011</a>
+            </li>
+            
+            <li id="source_8"> 
+                <cite>Al-Houdalieh, S. H. (2025, 3rd of May). Vanishing past: Cultural heritage destruction and memoricide in the Gaza Strip. İLKE Foundation Platform.</cite> 
+                <a href="https://platform.ilke.org.tr/en/analyze/vanishing-past-cultural-heritage-destruction-and-memoricide-in-the-gaza-strip/" target="_blank">https://platform.ilke.org.tr/en/analyze/vanishing-past-cultural-heritage-destruction-and-memoricide-in-the-gaza-strip/</a>
+            </li>
+
+            <li id="source_9"> 
+                <cite>Independent International Commission of Inquiry on the Occupied Palestinian Territory, including East Jerusalem, and Israel. (2025, 16 settembre). Legal analysis of the conduct of Israel in Gaza pursuant to the Convention on the Prevention and Punishment of the Crime of Genocide (A/HRC/60/CRP.3).</cite> 
+                <a href="https://www.marinacastellaneta.it/blog/wp-content/uploads/2025/09/a-hrc-60-crp-3.pdf" target="_blank">https://www.marinacastellaneta.it/blog/wp-content/uploads/2025/09/a-hrc-60-crp-3.pdf</a>
+            </li>
+
+            <li id="source_10"> 
+                <cite>Interactive Encyclopedia of the Palestine Question. (s.d.). Ṣumūd (Steadfastness).</cite> 
+                <a href="https://www.palquest.org/en/highlight/33633/sumud" target="_blank">https://www.palquest.org/en/highlight/33633/sumud</a>
+            </li>
+            
+            <li id="source_11"> 
+                <cite>Ibidem (Riferito a Interactive Encyclopedia of the Palestine Question).</cite>
+            </li>
+
+            <li id="source_12"> 
+                <cite>Taher, T. (2021). Interrompere la catastrofe, praticare la presenza. Una costellazione decoloniale del presente palestinese [Doctoral dissertation, Università degli Studi di Firenze].</cite> 
+                <a href="https://flore.unifi.it/retrieve/0d62ad22-143c-4f98-abf5-05b398c09bff/TESI_TamaraTaher.pdf" target="_blank"> https://flore.unifi.it/retrieve/0d62ad22-143c-4f98-abf5-05b398c09bff/TESI_TamaraTaher.pdf</a>
+            </li>
+
+        </ol>
+    </div>
   </div>
 
-  <!-- Sidebar Index -->
-  <div class="sidebar">
+    <div class="sidebar">
     <h3>Project Steps</h3>
     <a href="#intro">1. Introduction</a>
     <a href="#research">2. Research & Planning</a>
@@ -168,6 +255,7 @@
     <a href="#development">4. Development Steps</a>
     <a href="#challenges">5. Challenges & Solutions</a>
     <a href="#reflection">6. Final Reflection</a>
+    <a href="#sources-references">7. Bibliography</a> 
   </div>
 </body>
 </html>

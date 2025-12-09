@@ -10,8 +10,7 @@ body{
     background: white;;     
     justify-content:center;
     padding-top: 60px;
-    } 
-
+} 
 
 .navbar {
     position: fixed;
@@ -24,7 +23,7 @@ body{
     justify-content: space-between;
     padding: 0 30px;
     z-index: 1000;
-    }
+}
 
 .navbar .left,
 .navbar .right {
@@ -54,4 +53,31 @@ body{
 
 .narration_p{
     text-align: justify;
+}
+.source{
+    cursor: pointer;
+    transition: 0.7s;
+    color: white; 
+    text-decoration: underline;
+}
+
+.footer {
+    position: absolute;
+    box-sizing: border-box;
+    background: #111;
+    color: #fff;
+    padding: 3vw;
+    margin-top: 5vw;
+    width: 100%;
+    align-items: stretch;
+    margin-left: -1%;
+}
+
+.disclaimer{
+    font-size: small;
+}
+
+.copyright{
+    position: absolute;
+    font-size: x-small
 }
