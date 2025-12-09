@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="imgs/palestine_flag.png">
   <title>Steadfastness: A History Of Endurance</title>
   <style>
     :root{
-      --accent:#c8102e;
+      --pa-red:#c8102e;
       --border:#ccc;
       --navbar-h:60px;
       --text:#222;
-      --muted:#444;
       --bg:#fff;
     }
     html {
@@ -18,17 +18,15 @@
     }
     *{box-sizing:border-box}
 
-    html { font-size:16px; }
     body{
       margin:0;
       font-family: Arial, sans-serif;     
       color:var(--text);
       min-height:100vh;
-      background:url('background.jpg') no-repeat center center / cover;
+      background:url('imgs/background.jpg') no-repeat center center / cover;
       overflow:auto;                    
       padding-top: var(--navbar-h);        
       display:flex;
-      /* The next 3 lines + .stage below guarantee exact centering */
       align-items:stretch;
       flex-direction:column;
       justify-content:center;
@@ -44,31 +42,8 @@
       padding:0 30px; z-index:1000;
     }
     .navbar .left, .navbar .right{ display:flex; gap:20px; }
-    .navbar .center{ font-weight:bold; }
-    .navbar a{ text-decoration:none; color:var(--accent); font-weight:bold; }
-    .navbar .center a{ color:inherit; text-decoration:none; cursor:pointer; }
-
-    /* Mobile navbar fix */
-@media (max-width: 640px) {
-  .navbar {
-    padding: 0 12px;          /* less side padding */
-  }
-
-  .navbar .left,
-  .navbar .right {
-    gap: 10px;                /* smaller gaps between links */
-  }
-
-  .navbar a {
-    font-size: 0.7rem;        /* shrink link text */
-    font-weight: 600;         /* still readable, just less bulky */
-  }
-
-  .navbar .center {
-    font-size: 0.9rem;        /* title slightly bigger than links */
-  }
-}
-
+    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; cursor:pointer; }
+    .navbar .center a{ color:var(--text); }
 
 
     .stage{
@@ -83,36 +58,57 @@
     .content-box{
       background:var(--bg);
       width:min(90vw, 680px);
-      max-height: 100%;                        /* never taller than stage */
+      max-height: 100%;                        
       padding:40px;
       box-shadow:0 0 15px rgba(0,0,0,.3);
       border-radius:8px;
       text-align:center;
-      overflow:auto;                           /* internal scroll if needed */
+      overflow:auto;                           
     }
 
-    h1, p{ margin:0; }
     h1{
+      margin:0;
       font-size:2rem;
-      line-height:1.2;
-      margin:15px 0 20px 0;
-      font-weight:700;
-      color:var(--text);
+      margin:0px 0 30px 0;
+      font-weight:bold;
     }
-    p{
-      font-size:1rem;
+    .content-box p{
+      margin:0;
+      font-size:1.1rem;
       line-height:1.6;
-      color:var(--muted);
+      color:#444;
       text-align:justify;
-      margin-bottom:30px;
+      margin-bottom:12px;
+    }
+
+    .footer {
+      background: #111;
+      color: #444;
+      text-align: center;
+      padding: 20px;
+      margin-top: 80px;
     }
 
     @media (max-width:600px){
       .content-box{ padding:24px; width:min(92vw,560px); }
+      .navbar {
+      padding: 0 12px;
+      }
+
+      .navbar .left,
+      .navbar .right {
+      gap: 10px;
+      }
+
+      .navbar a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      }
     }
-    .footer {
+    
+      .footer {
       background: #111;
-      color: #fff;
+      color: #444;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
@@ -127,10 +123,10 @@
       <a href="about-us.html">About us</a>
     </div>
     <div class="center">
-      <a href="main-page.html" aria-label="Go to home">Steadfastness</a>
+      <a href="main-page.html" aria-label="Go to homepage">Steadfastness</a>
     </div>
     <div class="right">
-      <a href="#">Narratives</a>
+      <a href="narratives.html">Narratives</a>
       <a href="objects.html">Objects</a>
       <a href="#">Map</a>
     </div>
@@ -150,11 +146,14 @@
       </p>
     </div>
   </main>
-  <footer class="footer">
-   &copy; 2025 Palestinian Graduate Student Museum. All rights reserved.
+  <footer class="footer"> 
+    <p class="disclaimer"> <em>Disclaimer</em>: The purpose of this web site is to explore various types of typographic and layout style for museum pages, 
+    as an end-of-course project for the "Information Modeling and Web technologies" course of the Master Degree in 
+    Digital Humanities and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali. </p> 
+    <p class="copyright"> All copyrights and related rights on the content remain with their original owners. 
+    All copyright on the typographic and layout choices are 2025 © Steadfastness</p>
   </footer>
 </body>
 </html>
-
 
 
