@@ -510,6 +510,17 @@
     let currentIndex = 0;
     let currentPanelKey = null; // keeping selected panel across items
 
+    //what I added 
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemParam = urlParams.get('item');
+    if (itemParam !== null) {
+      const index = parseInt(itemParam, 10);
+      if (!isNaN(index) && index >= 0 && index < items.length) {
+        currentIndex = index;
+      }
+    }
+
+
     // DOM refs
     const imgEl = document.querySelector(".item-image img");
     const titleEl = document.querySelector(".item-details h2");
@@ -617,4 +628,5 @@
   </script>
 </body>
 </html>
+
 
