@@ -1,0 +1,205 @@
+
+:root {
+  --pa-red: #b10e2b;            
+  --text: #111111;
+  --li-text: #333333;
+  --bg: #d9d9d9;              
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 18px;           
+  line-height: 1.7;
+}
+
+
+.navbar {
+  background: #000000;
+  border-bottom: 1px solid #000;  
+}
+
+.navbar a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .center a{ color: #ffffff; }
+
+
+
+.navbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+.item-section {
+  position: relative;                           
+  border-radius: 12px;
+  overflow: hidden;              
+}
+
+
+.item-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("imgs/chafiye.jpg") center/cover no-repeat;
+  opacity: 0.5;                  
+  z-index: -1;                   
+}
+
+.item-image,
+.item-details {
+  position: relative;
+}
+
+
+.item-image {
+  border: 5px solid var(--pa-red);       
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);                                          
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18),
+}
+
+.item-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.metadata {
+  list-style: none;
+  padding: 10px 14px;
+  margin: 0 40px 0 0;                    
+  border: 5px solid var(--pa-red);       
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+
+.metadata li {
+  font-size: 1.15rem;  
+  font-weight: bold;    
+  color: var(--li-text);
+  font-family: "Times New Roman", serif;
+}
+
+
+.item-details h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.7rem; 
+  font-weight: bold;
+  color: #111;
+  text-shadow:
+   1px 1px 0 #fff,
+  -1px 1px 0 #fff,
+   1px -1px 0 #fff,
+  -1px -1px 0 #fff;
+  font-family: "Times New Roman", serif;
+}
+
+
+.accordion-panel p {
+  font-size: 1.1rem;    
+  line-height: 1.8;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+
+.accordion-card {
+  border: 1px solid #444;
+  background: #f5f5f5;
+}
+
+
+.accordion-header {
+  background: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: left;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Times New Roman", serif;
+  font-size: 1.15rem;     
+}
+
+
+.accordion-header::after {
+  font-size: 1.3rem;
+}
+
+
+.accordion-card[aria-expanded="true"] .accordion-header {
+  background: #000000;
+  color: #ffffff;
+}
+
+
+.accordion-panel {
+  background: #f2f2f2;
+  padding: 14px 16px;
+}
+
+.arrow-left::before,
+.arrow-right::before { content: ""; }
+
+.arrow-left,
+.arrow-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65px;              
+  height: 65px;
+  border: none;
+  padding: 0;
+  background: none;   
+  cursor: pointer;
+}
+
+
+.arrow-left {
+  left: 30px;
+  background-image: url("imgs/fistt.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+
+.arrow-right {
+  right: 30px;
+  background-image: url("imgs/fistt.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.arrow-left:focus,
+.arrow-right:focus,
+.accordion-header:focus,
+button:focus,
+a:focus {
+  outline: 3px solid rgba(177, 14, 43, 0.8);
+  outline-offset: 3px;
+}
+
+
+.footer {
+  background: #111;
+  color: #444;
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px;
+  font-size: 0.95rem;
+}
