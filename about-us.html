@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="imgs/palestine_flag.png">
   <title>About Us – Steadfastness</title>
   <style>
     :root {
-      --accent: #c8102e;
+      --pa-red: #c8102e;
       --text: #222;
       --bg: #fff;
-      --muted: #f7f7f7;
       --border: #ccc;
       --navbar-h: 60px;
       --content-gap: 40px;
@@ -42,17 +42,9 @@
       padding: 0 30px;
       z-index: 1000;
     }
-    .navbar .left,
-    .navbar .right {
-      display: flex;
-      gap: 20px;
-    }
-    .navbar .center { font-weight: bold; }
-    .navbar a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-    }
+    .navbar .left, .navbar .right{ display:flex; gap:20px; }
+    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; cursor:pointer; }
+    .navbar .center a{ color:var(--text); }
 
     /* Page container */
     .container {
@@ -62,24 +54,20 @@
     }
 
     /* Top explanation box */
-    .about-hero {
+    .about-proj {
       border: 1px solid var(--border);
-      background: var(--muted);
+      background: #f7f7f7;
       padding: 28px 24px;
       border-radius: 8px;
     }
-    .about-hero h1 {
+    .about-proj h1 {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: 1.8rem;
       color: #111;
     }
-    .about-hero h2 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
-      color: #444;
-    }
-    .about-hero p {
+
+    .about-proj p {
       margin: 0 0 10px;
       color: #444;
     }
@@ -89,10 +77,16 @@
       margin-top: var(--content-gap);
     }
 
+    .team-section h2 {
+      font-size: 1.8rem;
+      color: var(--pa-red);
+      margin: 0 20px 1px;
+    }
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px; /* thin space between the squares */
+      gap: 12px; 
       margin-top: 16px;
     }
 
@@ -112,13 +106,14 @@
       height: 120px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid var(--accent);
+      border: 3px solid var(--pa-red);
       margin-bottom: 12px;
       background: #ddd;
     }
     .team-avatar img {
       width: 100%;
       height: 100%;
+      transform: scale(1.3);
       object-fit: cover;
       display: block;
     }
@@ -129,12 +124,6 @@
       color: #111;
     }
 
-    .team-role {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 6px;
-    }
-
     .team-bio {
       font-size: 0.9rem;
       color: #555;
@@ -143,7 +132,7 @@
     /* Footer */
     .footer {
       background: #111;
-      color: #fff;
+      color: #444;
       text-align: center;
       padding: 20px;
       margin-top: 60px;
@@ -157,6 +146,19 @@
       .team-grid {
         grid-template-columns: 1fr;
       }
+      .navbar {
+      padding: 0 12px;
+      }
+
+      .navbar .left,
+      .navbar .right {
+      gap: 10px;
+      }
+
+      .navbar a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      }
     }
   </style>
 </head>
@@ -168,10 +170,10 @@
       <a href="about-us.html">About us</a>
     </div>
     <div class="center">
-      <a href="main-page.html" aria-label="Go to home">Steadfastness</a>
+      <a href="main-page.html" aria-label="Go to homepage">Steadfastness</a>
     </div>
     <div class="right">
-      <a href="#">Narratives</a>
+      <a href="narratives.html">Narratives</a>
       <a href="objects.html">Objects</a>
       <a href="#">Map</a>
     </div>
@@ -180,7 +182,7 @@
   <!-- Main Content -->
   <main class="container">
     <!-- Top box -->
-    <section class="about-hero" aria-labelledby="about-title">
+    <section class="about-proj" aria-labelledby="about-title">
       <h1 id="about-title">About the Steadfastness Project</h1>
 
       <p>
@@ -191,38 +193,38 @@
 
     <!-- Team members -->
     <section class="team-section" aria-label="Project team">
+      <h2 class="team-section">Team members</h3>
       <div class="team-grid">
         <!-- Person 1 -->
         <article class="team-card">
           <div class="team-avatar">
-            <!-- replace with our actual image -->
-            <img src="person1.jpg" alt="Person 1 portrait">
+            <img src="imgs/fa.jpg" alt="Person 1 portrait">
           </div>
           <div class="team-name">Farideh Sousani</div>
           <p class="team-bio">
-            Short description of the role in the project.
+           farideh.sousani@studio.unibo.it
           </p>
         </article>
 
         <!-- Person 2 -->
         <article class="team-card">
           <div class="team-avatar">
-            <img src="person2.jpg" alt="Person 2 portrait">
+            <img src="imgs/chi.jpg" alt="Person 2 portrait">
           </div>
           <div class="team-name">Chiara Picardi</div>
           <p class="team-bio">
-            Short description of the role in the project.
+            chiara.picardi@studio.unibo.it
           </p>
         </article>
 
         <!-- Person 3 -->
         <article class="team-card">
           <div class="team-avatar">
-            <img src="person3.jpg" alt="Person 3 portrait">
+            <img src="imgs/ce.jpg" alt="Person 3 portrait">
           </div>
           <div class="team-name">Cecilia Vesci</div>
           <p class="team-bio">
-           Short description of the role in the project.
+           cecilia.vesci@studio.unibo.it
           </p>
         </article>
       </div>
@@ -230,8 +232,12 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 Palestinian Graduate Student Museum. All rights reserved.
+  <footer class="footer"> 
+    <p class="disclaimer"> <em>Disclaimer</em>: The purpose of this web site is to explore various types of typographic and layout style for museum pages, 
+    as an end-of-course project for the "Information Modeling and Web technologies" course of the Master Degree in 
+    Digital Humanities and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali. </p> 
+    <p class="copyright"> All copyrights and related rights on the content remain with their original owners. 
+    All copyright on the typographic and layout choices are 2025 © Steadfastness</p>
   </footer>
 </body>
 </html>
