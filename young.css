@@ -1,7 +1,6 @@
 :root {
   --pa-red: #c3001a;          
   --ol-green: #1f6a3b;        
-  --border: #8fbc8f;
   --text: #163020;
   --bg: #e6f7e6;             
   --navbar-h: 60px;
@@ -132,9 +131,6 @@ li {
   border-color: var(--pa-red);
 }
 
-.accordion-card[aria-expanded="true"] .accordion-header {
-  background: var(--pa-red);
-}
 
 
 .accordion-panel {
@@ -153,9 +149,6 @@ li {
   margin: 0 0 0.75rem;
 }
 
-
-.arrow-left::before,
-.arrow-right::before { content: ""; }
 
 .arrow-left,
 .arrow-right {
@@ -198,8 +191,8 @@ li {
 
 .footer {
   background: #111;
-  color: #fff;
   text-align: center;
   padding: 20px;
   margin-top: 0;
 }
+
