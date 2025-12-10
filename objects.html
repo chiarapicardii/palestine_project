@@ -513,7 +513,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const itemParam = urlParams.get('item');
     if (itemParam !== null) {
-      const index = parseInt(itemParam, 10);
+      const index = parseInt(itemParam);
       if (!isNaN(index) && index >= 0 && index < items.length) {
         currentIndex = index;
       }
@@ -622,5 +622,6 @@
   </script>
 </body>
 </html>
+
 
 
