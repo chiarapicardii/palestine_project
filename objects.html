@@ -532,11 +532,9 @@
       if (href) {
         themeLink.setAttribute("href", href);
         themeLink.disabled = false;
-        document.body.setAttribute("data-theme", key);
       } else {
         themeLink.disabled = true;
         themeLink.removeAttribute("href");
-        document.body.removeAttribute("data-theme");
       }
     }
 
@@ -624,4 +622,5 @@
   </script>
 </body>
 </html>
+
 
