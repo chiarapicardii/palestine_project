@@ -1,4 +1,3 @@
-
 :root {
   --pa-red: #b10e2b;            
   --text: #111111;
@@ -63,7 +62,7 @@ body {
   border: 5px solid var(--pa-red);       
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);                                          
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18),
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
 }
 
 .item-image img {
@@ -91,8 +90,7 @@ body {
 
 
 .item-details h2 {
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   font-size: 1.7rem; 
   font-weight: bold;
   color: #111;
@@ -137,11 +135,6 @@ body {
   font-size: 1.3rem;
 }
 
-
-.accordion-card[aria-expanded="true"] .accordion-header {
-  background: #000000;
-  color: #ffffff;
-}
 
 
 .accordion-panel {
@@ -200,6 +193,6 @@ a:focus {
   color: #444;
   text-align: center;
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 40px;
   font-size: 0.95rem;
 }
