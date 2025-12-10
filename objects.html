@@ -38,7 +38,7 @@
       z-index: 1000;
     }
     .navbar .left, .navbar .right{ display:flex; gap:20px; }
-    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; cursor:pointer; }
+    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; }
     .navbar .center a{ color:var(--text); }
 
     /* Main container */
@@ -151,7 +151,7 @@
       color: #444;
       text-align: center;
       padding: 20px;
-      margin-top: 80px;
+      margin-top: 40px;
     }
 
     @media (max-width: 600px) {
@@ -527,21 +527,19 @@
     const themeLink = document.getElementById("themeStylesheet");
 
     function applyThemeForPanel(key) {
-      if (!key) {
-        themeLink.disabled = true;
-        themeLink.setAttribute("href", "");
-        document.body.removeAttribute("data-theme");
-        return;
-      }
-      const href = themeFiles[key] || "";
+      const href = key ? themeFiles[key] : "";
+
       if (href) {
         themeLink.setAttribute("href", href);
         themeLink.disabled = false;
+        document.body.setAttribute("data-theme", key);
       } else {
         themeLink.disabled = true;
+        themeLink.removeAttribute("href");
+        document.body.removeAttribute("data-theme");
       }
-      document.body.setAttribute("data-theme", key);
     }
+
 
     function renderAccordionContent() {
       const item = items[currentIndex];
