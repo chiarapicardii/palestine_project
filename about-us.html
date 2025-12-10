@@ -17,10 +17,6 @@
 
     * { box-sizing: border-box; }
 
-    html {
-      overflow-y: scroll; 
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -43,7 +39,7 @@
       z-index: 1000;
     }
     .navbar .left, .navbar .right{ display:flex; gap:20px; }
-    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; cursor:pointer; }
+    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; }
     .navbar .center a{ color:var(--text); }
 
     /* Page container */
@@ -61,8 +57,7 @@
       border-radius: 8px;
     }
     .about-proj h1 {
-      margin-top: 0;
-      margin-bottom: 12px;
+      margin: 0 0 12px;
       font-size: 1.8rem;
       color: #111;
     }
@@ -77,7 +72,7 @@
       margin-top: var(--content-gap);
     }
 
-    .team-section h2 {
+    .team-title {
       font-size: 1.8rem;
       color: var(--pa-red);
       margin: 0 20px 1px;
@@ -135,11 +130,11 @@
       color: #444;
       text-align: center;
       padding: 20px;
-      margin-top: 60px;
+      margin-top: 40px;
     }
 
     /* Responsive behavior */
-    @media (max-width: 900px) {
+    @media (max-width: 600px) {
       .container {
         padding: calc(var(--navbar-h) + 24px) 20px 40px;
       }
@@ -193,7 +188,7 @@
 
     <!-- Team members -->
     <section class="team-section" aria-label="Project team">
-      <h2 class="team-section">Team members</h3>
+      <h2 class="team-title">Team members</h2>
       <div class="team-grid">
         <!-- Person 1 -->
         <article class="team-card">
