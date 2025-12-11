@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "monaco", sans-serif;
+    background-color: rgb(186, 194, 242);
+    color: #030000;
+    line-height: 1.6;
+  }
+  
+  header {
+    /* Contenitore padre, essenziale per posizionare l'overlay */
+    .image-overlay-container {
+    position: relative; /* Base per il posizionamento assoluto dell'overlay */
+    display: inline-block; /* Avvolge l'immagine esattamente */
+    cursor: pointer;
+    border-radius: 8px; /* Assicurati che corrisponda al bordo dell'immagine */
+    overflow: hidden; /* Nasconde l'overlay se esce dai bordi arrotondati */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Overlay che copre l'immagine (inizialmente trasparente/invisibile) */
+.image-overlay-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0; /* Inizialmente invisibile */
+  transition: .3s ease; /* Transizione fluida per l'animazione */
+  background-color: rgba(0, 0, 0, 0.6); /* Oscuramento (60% di nero) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  pointer-events: none; /* Permette al click di raggiungere il link sottostante */
+}
+
+/* Effetto al passaggio del mouse */
+.image-overlay-container:hover .overlay {
+  opacity: 1; /* Rende l'overlay visibile */
+}
+
+/* Effetto al passaggio del mouse sull'immagine stessa (opzionale) */
+.image-overlay-container:hover img {
+  transform: scale(1.03); /* Piccolo zoom per dare profondità */
+  transition: transform .3s ease;
+}
+
+
+    background: url('img/triangolo.png'), url('img/striscie.png');
+    background-position:left center, center;
+    background-size: auto 100%, 100% 100%; 
+    background-repeat: no-repeat, repeat-x ;
+    color:#010804;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    color: #222;
+  }
+  
+  /* Layout due colonne: mappa a sinistra, testo a destra */
+  #layout {
+   display: flex;
+   flex-direction: row; 
+   align-items: stretch;
+   justify-content: flex-start;
+   gap: 2rem;
+   margin-top: 2rem;
+  }
+  
+  /* 🔹 Mappa e Contenitore a misura immagine */
+  #map {
+   width: 80%; 
+   max-width: 610px;
+   aspect-ratio: 1000 / 1000; 
+   border-radius: 12px;
+   overflow: hidden;
+  }  
+  
+  /* Rende trasparente il contenitore Leaflet */
+  .leaflet-container {
+    background: transparent !important; 
+  }
+  
+  /* 🔹 Testo descrittivo sulla destra */
+  #sideText {
+    width: 40% ; 
+    width: center;
+    height: auto; 
+    min-height: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 10px rgba(33, 33, 153, 0.2);
+    color: #222;
+  }
+  
+  /* Popup con immagine (se fosse usato, ma qui è gestito da sideText) */
+  .leaflet-popup-content img {
+    width: 120px;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 6px;
+    object-fit: cover;
+  }
+  
+  footer {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+  
+  /* Stile per la visualizzazione delle coordinate (Helper) */
+  #coordBox {
+    z-index: 1000;
+  }
