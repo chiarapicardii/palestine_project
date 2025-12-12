@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation: Steadfastness Project</title>
+  <link rel="icon" type="image/png" href="imgs/palestine_flag.png">
+
   <style>
     :root {
       --accent: #c8102e;
@@ -136,51 +138,198 @@
       <a href="about-us.html">About us</a>
     </div>
     <div class="center">
-      <a href="index.html" aria-label="Go to home">Steadfastness</a>
+      <a href="main-page.html" aria-label="Go to home">Steadfastness</a>
     </div>
     <div class="right">
       <a href="narratives.html">Narratives</a>
       <a href="objects.html">Objects</a>
-      <a href="map.html">Map</a>
+      <a href="#">Map</a>
     </div>
   </div>
 
     <div class="content">
-    <h1>Progetto MMMM: Documentazione Tecnica</h1>
-    
+    <h1>Documentation</h1>
+
     <div class="section" id="intro">
-      <h2>1. Introduction</h2>
+      <h2>1. Abstract</h2>
+      <p>abstract </p>
+    </div>
+    
+    <div class="section" id="idea">
+      <h2>2. Project idea</h2>
       <p>This is where you describe the aim and scope of your project.</p>
+      <h3>2.1. Items of the exibition</h3>
     </div>
 
-    <div class="section" id="research">
-      <h2>2. Research & Planning</h2>
-      <p>Summarize your preliminary research, tools used, or cultural questions posed.</p>
+
+    <div class="section" id="goals">
+      <h2>3. Goals</h2>
+      <p>what are the goals who are the target </p>
     </div>
     
-    <div class="section" id="design">
-        <h2>3. Design Process (Deliberate Design)</h2>
+    <div class="section" id="website">
+        <h2>4. The website </h2>
         <p>Explain how you chose your structure, layout, and technology stack. (Qui andrà la giustificazione dei temi Immersive e Minimal).</p>
+        
+        <h3>4.1. The Main page</h3>
+        <p> </p>
+
+        <h3>4.2. The Map</h3>
+        <p> </p>
+
+        <h3>4.3. The Objects</h3>
+        <p> </p>
+
+        <h3>4.4. The Narrations</h3>
+          <p>
+              The section I curated, <a href="narratives.html"> narration</a>, constitutes the core of the collection, not only as a functional way to display content but as a tool 
+              to guide users through a predefined, coherent path. Moreover, the entire section is based on a dual-style 
+              system: <strong> the Immersive Style </strong> and the <strong>Minimal Style</strong>. 
+              The user can easily switch between these two modes, enabling distinct experiences on the same content.
+          </p>
+
+          <ul>
+              <li><strong>Immersive Style:</strong> Designed for emotional engagement and dramatic visual storytelling.</li>
+              <li><strong>Minimal Style:</strong> Optimized for readability, neutrality, and rapid information retrieval.</li>
+          </ul>
+
+          <p>
+              This dual approach, apart from being a specific project requirement, perfectly aligns with Ghanfili’s 
+              idea of open free exploration: «where users have the freedom to explore content at their own pace and 
+              direction.This empowers users to delve deeper into the narrative, enhancing engagement 
+              and allowing for a more personalized experience.» 
+              <a class="source" href="documentation.html#source_13"> <small> [13] </small> </a> 
+          </p>
+
+          <p>
+              From a technical perspective, all measurements were chosen using scalable units (vw, vh, and percentages) 
+              to ensure adaptability across different screens. However, even though a basic media query 
+              (<code>max-width: 600px</code>) ensures mobile phone usability, the primary format is mainly intended 
+              for larger screens.
+          </p>
+
+          <h4 id="immersive-style">4.4.1. Immersive Style </h4>
+          <p>
+              The immersive theme was directly inspired by the concept of <strong>scrollytelling</strong>, observed in 
+              websites like <a href="https://story.internal-displacement.org/the-road-was-long-a-voice-from-ukraine/index.html">
+              The road was long: a voice from Ukraine</a> and <a href="https://www.nbcnews.com/specials/detroit-segregation-wall/"> 
+              Detroit segregation wall still stands</a>, whose themes align with our politically-motivated exhibition. 
+              These references and an understanding of scrollytelling literature guided the design choices.
+          </p>
+
+          <h5>Colors and Typography</h5>
+              <p>
+                  The palette—black background with white and red (<code>#c8102e</code>) text—mirrors three of the 
+                  four colours of the Palestinian flag and exploits high-contrast readability.
+                  It enhances atmospheric immersion by reducing peripheral visual noise.The use of <em> Georgia</em>, a 
+                  serif typeface, reinforces the dramatic tone and supports a cinematic aesthetic.
+              </p>
+
+          <h5>Structure</h5>
+              <p> 
+                  The image height is set at <code>100vh</code> (<code>height: calc(100vh - 60px);</code>) so 
+                  that the image occupies the whole screen, creating visual continuity and making the user feel 
+                  “inside” the narrative frame (supporting emotional engagement).
+              </p>
+              <p>
+                  The images are the centre of the focus; hence, the content, especially in the Timeline part, 
+                  is kept minimal. The user can activate the content layer via a <code>:hover</code> action, revealing a button 
+                  “more information” linked to the object’s page.
+              </p>
+
+          <h5>Animations and Thematic Cues</h5>
+          <p>
+            «Scrollytelling provides a form of presentation that keeps users engaged and encourages reading and 
+            interaction through a continuous flow.»
+            <a class="source" href="documentation.html#source_14"> <small> [14] </small> </a> 
+          </p>
+
+          <p>
+              I included fade-in animation triggered on scroll with the intention to: 
+          </p>
+              <ul>
+                  <li>Giving a specific rhythm into the narrative </li>
+                  <li>Guiding the user’s eye from one element to another </li>
+                  <li>Simulate the temporal unfolding of events</li>
+              </ul>
+          <p> As also declared by Ghanfili: «because scrollytelling takes users step-by-step 
+              through a story, data can be presented progressively, making complex concepts easier to 
+              understand without overwhelming users with too much information at once.»
+              <a class="source" href="documentation.html#source_15"> <small> [15] </small> </a> 
+          </p>
+
+          <p>
+              Sepia Effect (on <code> :hover</code>): Serves two specific functions:
+          </p>
+          <ul>
+              <ol>
+                  <li>Accessibility cue: To signal the interactivity of the image.</li>
+                  <li>Thematical Sense of historicity: It subconsciously reminds the user of old photos, contributing to a sense of dramatic weight.</li>
+              </ol>
+          </ul>
+
+          <strong>User Service</strong>
+          <ul>
+              <li><strong>Teacher (Alice):</strong> Can be used as a standalone presentation for the topic, having also explicit academic references.</li>
+              <li><strong>General Visitor (Bruno):</strong> Can experience a sort of "virtual museum room", with a guided narrative connecting the items.</li>
+              <li><strong>Expert (Carla):</strong> Could benefit from the cited sources to learn about specific literature on themes and could see the contextualized items.</li>
+          </ul>
+
+
+          <h4 id="minimal-style">4.4.2 Minimal Style </h4>
+
+          <p>
+              The minimal style relies on <strong>Style</strong> principles (grid rationality, typographic hierarchy, functional asymmetry) 
+              and the Flat Design visual economy. The aim is to offer a consultation-based reading mode, enabling 
+              users to scan the content at a glance, useful for audiences who need a clear, archival-like presentation of 
+              the material.
+          </p>
+          <p>
+              Inspiration was drawn from platforms like <a href="https://antenati.cultura.gov.it/story_author/john-tomassi/"> John Tomassi Archivi - Portale Antenati</a> and the
+              <a href="https://www.911memorial.org/learn/students-and-teachers/DLE-archives"> National September Memorial & Museum.</a>
+          </p>
+
+          <h5>Colors and Typography</h5>
+          <p>
+              The background is a light grey, reinforcing the documentary-archival 
+              tone. The main accent colour is green (<code>#017609</code>), the fourth colour of the country’s flag.
+          </p>
+          <p>
+              The font is Arial(San-serif), following the neutral style and aligning with the team's coherent visual choices.
+          </p>
+
+          <h5>Structure and Scannability</h5>
+          <p>
+              The layout uses a grid (<code>display: grid</code>) and consistent asymmetrical spacing 
+              (e.g., margins of <code>10vw</code> on desktop) to reflect the main layout rules of the Swiss style.
+              This structure complies with the F-shaped reading pattern typical of online scanning, accelerating 
+              navigation and making it easier to consult the whole collection with a quick skimming.
+          </p> 
+          <p>
+              Images are generally smaller (<code>height: 20vh</code>) than the Immersive ones, as the focus is mainly on the text and not on the immersive nature of the items.
+          </p>
+
+          <p> 
+              The Timeline in the minimal version is designed as a horizontal scroller
+              (using Flexbox and <code>overflow-x: auto</code>), which is conventionally associated with temporal 
+              progression.
+          </p>        
+
+          <p> 
+              A hover action reveals a card, aiming to replicate the information labels found in a real museum, along with a “more information” button leading to the item’s page.
+          </p>
+
+          <strong>User Service</strong>
+          <ul>
+              <li><strong>Teacher (Alice):</strong> Can be guided by a precise narration in the preparation process of a lecture or potential visit (due to clear structure and readability).</li>
+              <li><strong>Businessman (Bruno):</strong> Will have a quick framing of the items in an accessible and rapid overview, allowing him to quickly decide which objects to explore (due to scannability).</li>
+              <li><strong>Expert (Carla):</strong> Can benefit from the potential presence of citations and can skim comfortably if looking for something specific (due to clear typographic hierarchy).</li>
+          </ul>
     </div>
 
-    <div class="section" id="development">
-      <h2>4. Development Steps</h2>
-      <p>Break down your development work step by step (e.g., HTML, CSS, interactivity).</p>
-    </div>
-
-    <div class="section" id="challenges">
-      <h2>5. Challenges & Solutions</h2>
-      <p>Write about any difficulties faced and how you solved them.</p>
-    </div>
-
-    <div class="section" id="reflection">
-      <h2>6. Final Reflection</h2>
-      <p>Reflect on what you learned and what could be improved in future iterations.</p>
-    </div>
-    
     <div class="section" id="bibliography">
-      <h2 id="sources_heading">7. Bibliography </h2>
-      <p>Elenco completo e navigabile delle fonti citate all'interno della narrazione "Memory as resistance" (story.html).</p>
+      <h2 id="sources_heading">5. Bibliography </h2>
+      <p>Sources list:</p>
 
       <ol class="source_list">
             
@@ -235,7 +384,7 @@
             </li>
             
             <li id="source_11"> 
-                <cite>Ibidem (Riferito a Interactive Encyclopedia of the Palestine Question).</cite>
+                <cite>Ibidem (Interactive Encyclopedia of the Palestine Question).</cite>
             </li>
 
             <li id="source_12"> 
@@ -243,20 +392,29 @@
                 <a href="https://flore.unifi.it/retrieve/0d62ad22-143c-4f98-abf5-05b398c09bff/TESI_TamaraTaher.pdf" target="_blank"> https://flore.unifi.it/retrieve/0d62ad22-143c-4f98-abf5-05b398c09bff/TESI_TamaraTaher.pdf</a>
             </li>
 
+            <li id="source_13"> 
+                <cite>Pedram Ghanfili, Head of Webpublishing (2023). From storytelling to scrollytelling - modern digital publications that strengthen and develop the data literacy of our users.</cite>
+                <a href="https://www.bfs.admin.ch/bfs/en/home/news/diss-comm/2023/pedram-ghanfili.html" target="_blank"> https://www.bfs.admin.ch/bfs/en/home/news/diss-comm/2023/pedram-ghanfili.html</a>
+            </li>    
+
+            <li id="source_14"> 
+                <cite>Ibidem (Ghanfili 2023)</cite>
+            </li>
+            
+            <li id="source_15"> 
+                <cite>Ibidem (Ghanfili 2023)</cite>
+            </li>
         </ol>
     </div>
   </div>
 
     <div class="sidebar">
     <h3>Project Steps</h3>
-    <a href="#intro">1. Introduction</a>
-    <a href="#research">2. Research & Planning</a>
-    <a href="#design">3. Design Process</a>
-    <a href="#development">4. Development Steps</a>
-    <a href="#challenges">5. Challenges & Solutions</a>
-    <a href="#reflection">6. Final Reflection</a>
-    <a href="#sources-references">7. Bibliography</a> 
+    <a href="#abstract">1. Abstract</a>
+    <a href="#idea">2. Project idea</a>
+    <a href="#goals">3. Goals </a>
+    <a href="#website">4. The website</a>
+    <a href="#bibliography">5. Bibliography</a> 
   </div>
 </body>
-
 </html>
