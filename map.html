@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museo Interattivo - Mappa e Reperti</title>
+
+  <link rel="stylesheet" href="map.css"> 
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+ <!-- Navbar -->
+ <div class="navbar" role="navigation" aria-label="Main">
+  <div class="left">
+    <a href="documentation.html">Documentation</a>
+    <a href="about-us.html">About us</a>
+  </div>
+  <div class="center">
+    <a href="index.html" aria-label="Go to homepage">Steadfastness</a>
+  </div>
+  <div class="right">
+    <a href="narratives.html">Narratives</a>
+    <a href="objects.html">Objects</a>
+    <a href="map.html">Map</a>
+  </div>
+</div>
+
+  <!--<header>Palestine Interactive Museum</header>-->
+
+  <main>
+    <section>
+      <h2>Musuem Map</h2>
+      <p>
+        Explore our museum through the interactive map.
+        Each point represents a work on display in the various rooms.
+        By clicking on the points, you can view images and information about the 15 objects on display
+      </p>
+    </section>
+
+    <section id="layout">
+      <div id="map"></div>
+      <div id="sideText">
+        <p>
+         Click on the blue dots on the map to discover the objects.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Information</h2>
+      <p>
+        📍 <b>address:</b> Via dei Musei 12, Roma<br>
+        🕓 <b>Time:</b> 9:00 – 19:00<br>
+        🎟️ <b>Free admission </b> on the first Sunday of the month</b>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer"> 
+    <p class="disclaimer"> <em>Disclaimer</em>: The purpose of this web site is to explore various types of typographic and layout style for museum pages, 
+    as an end-of-course project for the "Information Modeling and Web technologies" course of the Master Degree in 
+    Digital Humanities and Digital Knowledge of the University of Bologna, under prof. Fabio Vitali. </p> 
+    <p class="copyright"> All copyrights and related rights on the content remain with their original owners. 
+    All copyright on the typographic and layout choices are 2025 © Steadfastness</p>
+  </footer>
+
+  <script src="map.js"></script>
+</body>
+</html>
