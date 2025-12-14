@@ -8,7 +8,7 @@
 
   <style>
     :root {
-      --pa-red: #c8102e;
+      --accent: #c8102e;
       --border: #ccc;
       --navbar-h: 60px;
     }
@@ -42,8 +42,17 @@
       z-index: 1000;
     }
     .navbar .left, .navbar .right { display: flex; gap: 20px; }
-    .navbar a{ text-decoration:none; color:var(--pa-red); font-weight:bold; }
-    .navbar .center a{ color: #222; }
+    .navbar .center { font-weight: bold; }
+    .navbar a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .navbar .center a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
     /* Content area */
     .content {
@@ -73,7 +82,7 @@
     .sidebar a {
       display: block;
       margin-bottom: 12px;
-      color: var(--pa-red);
+      color: var(--accent);
       text-decoration: none;
       font-weight: bold;
     }
@@ -141,71 +150,128 @@
     <div class="content">
     <h1>Documentation</h1>
 
-    <div class="section" id="intro">
-      <h2>1. Abstract</h2>
-      <p>abstract </p>
-    </div>
-    
     <div class="section" id="idea">
-      <h2>2. Project idea</h2>
-      <p>This is where you describe the aim and scope of your project.</p>
-      <h3>2.1. Items of the exibition</h3>
+      <h2>1. Project idea</h2>
+      <p>Our website, Steadfastness (Ṣumūd), is an MMMM project — a Meta
+        Mirror Multimedia Museum — designed as a digital replica of a 
+        physical collection that represents a cultural phenomenon within a 
+        multimedia environment. It can be used both to prepare for a future
+        visit and as a structured virtual exploration of the exhibition.
+      </p>
+      <p> 
+        The collection focuses on the Palestinian context and, as the title suggests, 
+        aims to highlight practices of everyday resistance by giving visibility
+        to marginalized or erased voices and materials. Other than presenting 
+        a chronological or descriptive archive, the project reflects on the role of 
+        archival practices as active tools against memoricide. The selection and 
+        narrative organization of items aims to respond to the systematic erasure 
+        enacted by military actions and dominant Western media discourses, repositioning 
+        cultural artifacts as instruments of historical persistence and political testimony.
+      </p>
+      <h3 id="items">1.2. Items of the exibition</h3>
+      <p> 
+        The exhibition consists of heterogeneous items — including posters, photographs, 
+        magazines, poems, and personal documents — spanning from the 
+        1930s to the late 20th century. These elements are drawn from 
+        various collections with the common goal of preserving Palestinian 
+        culture through archival and digitization practices.
+      </p>
+      <p> 
+        This selection aims to combine political imagery with objects and expressions of
+        daily life. Political posters and certain photographs are explicitly linked to 
+        themes of resistance and liberation, while others relate to ordinary life, social 
+        practices, and magazines. This juxtaposition reflects our intention to both create 
+        a more rounded image of Palestinian life and to represent resistance not only as violent 
+        political action (as often narrated by media) but also as an everyday act of endurance 
+        and existence. This concept is central to Ṣumūd (Steadfastness): common, non-violent resilience.
+      </p>
+      <p> 
+        Every item is presented in different narratives, addressing diverse potential audiences, 
+        associated to a specific type of description (longer or shorter) whith corresponding layout,
+        designed to suit each of our potential users as specifically as possible.
+      </p>
+
+      <h3 id="work_division">1.2. Work division</h3>
+      We developed together the main ideas, then we worked together on the selection and reseach of the items.
+      For the website development we divided it in three main sections. 
+      <ul> 
+        <li> <strong>Farideh Sousani:</strong> </li> Main page, Object, About us; Theme for Young Visitors and Theme for Adult Audiences.
+        <li> <strong>Chiara Picardi:</strong> </li>Narrations (Story-based and Timeline); Theme immersive and Theme minimal.
+        <li> <strong>Cecilia Vesci:</strong></li>Map; Theme for graduate student and Theme for field expert.
+      </ul>
+
     </div>
 
 
     <div class="section" id="goals">
-      <h2>3. Goals</h2>
-      <p>what are the goals who are the target </p>
+      <h2>2. Goals</h2>
+      <p>
+        The goal of our project is to contrast memoricide with archiving practices, 
+        in particular, taking advantage of the digital space to create a bigger availability 
+        for our items.
+      </p>
+      <p> 
+        Then, regarding our users, we wanted to offer different possibilities of access, 
+        narratively – in the narrations and in the four levels of description for the items – 
+        and in the layout. Specifically the types of target we had in mind, as per project 
+        request, were: 
+        <ul> 
+          <li> Alice: a teacher in a middle school, who needs to plan ahead the visit to the exhibition, and organize her lessons in class and during the actual visit.</li> 
+          <li> Bruno: a businessman with a generic interest in the topic of thje exhibition, but little background on it.</li>
+          <li> Carla: PhD student in a topic connected but not overlapping the exhibition. She needs to understand whether a physical visit to the exhibition can add more information than simply reading some further books</li>
+        </ul>
+      </p>
+      <p>
+        So, we tried to balance, as much as possible, the emotional engagement and the informational consultation,
+        adapting the experience to different time constraints, levels of expertise and interpretative model.
+      </p>
     </div>
     
     <div class="section" id="website">
-        <h2>4. The website </h2>
-        <p>Explain how you chose your structure, layout, and technology stack. (Qui andrà la giustificazione dei temi Immersive e Minimal).</p>
+      <h2>3. The website </h2>
         
-        <h3>4.1 Main Page</h3>  
-
-          <p>
-            The main page functions as the conceptual and visual entry point to the project. My design adopts a deliberately minimal layout in order to foreground the project’s core intent: to inform about the war in Palestine while giving voice to steadfastness, continuity, resistance, and identity. Rather than overwhelming the user with information, the main page establishes an emotional and thematic framework that prepares the visitor for deeper exploration of the content. 
-          </p> 
+      <h3 id="main_page">3.1. The Main page</h3>
+        <p>
+          The main page functions as the conceptual and visual entry point to the project. My design adopts a deliberately minimal layout in order to foreground the project’s core intent: to inform about the war in Palestine while giving voice to steadfastness, continuity, resistance, and identity. Rather than overwhelming the user with information, the main page establishes an emotional and thematic framework that prepares the visitor for deeper exploration of the content. 
+        </p> 
        
-          <p>
-            The background image plays a central role in conveying this intent. Its brown-toned hue contributes to an archival atmosphere, reinforcing the documentary and historical dimension of the project. Within the image, symbolic elements are carefully balanced: children representing the future stand holding flags on one side, while troops advancing toward war appear on the other. This visual juxtaposition captures the tension between continuity and resistance, loss and persistence, that underpins the entire project. 
-          </p> 
+        <p>
+          The background image plays a central role in conveying this intent. Its brown-toned hue contributes to an archival atmosphere, reinforcing the documentary and historical dimension of the project. Within the image, symbolic elements are carefully balanced: children representing the future stand holding flags on one side, while troops advancing toward war appear on the other. This visual juxtaposition captures the tension between continuity and resistance, loss and persistence, that underpins the entire project. 
+        </p> 
           
-          <p>
-            A central content box is positioned at the heart of the page to immediately attract attention while still allowing the background imagery to remain visible and meaningful. This box contains introductory text that outlines the project’s goals and contextual framework, acting as a threshold to the informational structure explored in subsequent pages. 
-          </p> 
+        <p>
+          A central content box is positioned at the heart of the page to immediately attract attention while still allowing the background imagery to remain visible and meaningful. This box contains introductory text that outlines the project’s goals and contextual framework, acting as a threshold to the informational structure explored in subsequent pages. 
+        </p> 
         
-          <p>
-            The title adopts the colors of the Palestinian flag, a visual strategy consistently maintained throughout the project to reinforce thematic coherence and national identity. 
-          </p> 
+        <p>
+          The title adopts the colors of the Palestinian flag, a visual strategy consistently maintained throughout the project to reinforce thematic coherence and national identity. 
+        </p> 
           
-          <h4>4.1.1 Navigation System </h4> 
+        <h4>3.1.1 Navigation System </h4> 
+        <p> 
+          The navigation bar follows the same chromatic logic as the rest of the interface, drawing from the colors of the Palestinian flag. Beyond its aesthetic role, the navigation system is designed as a key accessibility and orientation tool. 
+        </p> 
           
-          <p> 
-            The navigation bar follows the same chromatic logic as the rest of the interface, drawing from the colors of the Palestinian flag. Beyond its aesthetic role, the navigation system is designed as a key accessibility and orientation tool. 
-          </p> 
-          
-          <p>
-            Its structure remains consistent across all pages and themes, allowing users to develop familiarity and navigate efficiently between different sections of the project. This stability reduces cognitive load and ensures that users can focus on content rather than interface learning.
-          </p> 
+        <p>
+          Its structure remains consistent across all pages and themes, allowing users to develop familiarity and navigate efficiently between different sections of the project. This stability reduces cognitive load and ensures that users can focus on content rather than interface learning.
+        </p> 
         
-          <p> 
-            By maintaining a persistent and coherent navigation framework, the main page establishes structural continuity with the object pages and other sections of the project, reinforcing the idea of a unified system rather than a collection of isolated components. 
-          </p> 
+        <p> 
+          By maintaining a persistent and coherent navigation framework, the main page establishes structural continuity with the object pages and other sections of the project, reinforcing the idea of a unified system rather than a collection of isolated components. 
+        </p>
 
-        <h3>4.2. The Map</h3>
+        <h3 id="map">3.2. The Map</h3>
         <p> </p>
 
-        <h3>4.3 Objects</h3>
-          <p>
+        <h3 id="objects">3.3. The Objects</h3>
+        <p>
             This section outlines the conceptual, structural, and visual strategies adopted for the presentation of objects within the project.
             I decided on the design of the object pages by the need to address a diverse audience while maintaining clarity, accessibility, and
             narrative depth. Objects are not presented as static entities, but as entry points into multiple interpretative layers that users can
             actively choose and explore.
           </p>
           
-          <h4>4.3.1 Layout and Information Hierarchy</h4>
+          <h4>3.3.1 Layout and Information Hierarchy</h4>
           <p>
             Each object is displayed individually to ensure focused engagement and ease of navigation. The layout combines a primary image with a
             concise set of metadata positioned alongside it.
@@ -219,7 +285,7 @@
             narratives, allowing users to decide whether and how deeply to engage with the object.
           </p>
           
-          <h4>4.3.2 Audience-Based Narrative System</h4>
+          <h4>3.3.2 Audience-Based Narrative System</h4>
           <p>
             To accommodate different reading needs and levels of interest, each object includes an accordion-based narrative system positioned
             beneath the main presentation.
@@ -239,7 +305,7 @@
             project.
           </p>
           
-          <h4>4.3.3 Theme for Young Visitors</h4>
+          <h4>3.3.3 Theme for Young Visitors</h4>
           <p>
             The theme designed for younger audiences emphasizes engagement, simplicity, and sustained attention.
           </p>
@@ -268,32 +334,32 @@
             avoiding complex or distressing historical details, ensuring that the material remains appropriate and comprehensible for younger users.
           </p>
           
-          <h4>4.3.4 Theme for Adult Audiences</h4>
+          <h4>3.3.4 Theme for Adult Audiences</h4>
           <p>
             The adult-oriented theme adopts a more restrained and neutral visual language, prioritizing readability and accessibility.
           </p>
           
           <p>Key characteristics include:</p>
           <ul>
-            <li>
-              A palette dominated by black, white, and grey, with red accents derived from the national flag
-            </li>
-            <li>
-              Slightly enlarged typography to accommodate users with visual impairments
-            </li>
-            <li>
-              The integration of the keffiyeh pattern to reinforce cultural familiarity and thematic coherence
-            </li>
-          </ul>
+          <li>
+            A palette dominated by black, white, and grey, with red accents derived from the national flag
+          </li>
+          <li>
+            Slightly enlarged typography to accommodate users with visual impairments
+          </li>
+          <li>
+            The integration of the keffiyeh pattern to reinforce cultural familiarity and thematic coherence
+          </li>
+        </ul>
           
-          <p>
-            To support usability and navigation, elements requiring user attention such as images and metadata blocks are emphasized through red
-            borders. Interactive elements are further highlighted upon selection, providing clear visual navigation and improving accessibility for
-            users less accustomed to digital interfaces.
-          </p>
+        <p>
+          To support usability and navigation, elements requiring user attention such as images and metadata blocks are emphasized through red
+          borders. Interactive elements are further highlighted upon selection, providing clear visual navigation and improving accessibility for
+          users less accustomed to digital interfaces.
+        </p>
 
 
-        <h3>4.4. The Narrations</h3>
+        <h3 id="narrations">3.4. The Narrations</h3>
           <p>
               The section I curated, <a href="narratives.html"> narration</a>, constitutes the core of the collection, not only as a functional way to display content but as a tool 
               to guide users through a predefined, coherent path. Moreover, the entire section is based on a dual-style 
@@ -321,7 +387,7 @@
               for larger screens.
           </p>
 
-          <h4 id="immersive-style">4.4.1. Immersive Style </h4>
+          <h4>3.4.1. Immersive Style </h4>
           <p>
               The immersive theme was directly inspired by the concept of <strong>scrollytelling</strong>, observed in 
               websites like <a href="https://story.internal-displacement.org/the-road-was-long-a-voice-from-ukraine/index.html">
@@ -350,7 +416,7 @@
                   “more information” linked to the object’s page.
               </p>
 
-          <h5>Animations and Thematic Cues</h5>
+          <h5>Animations</h5>
           <p>
             «Scrollytelling provides a form of presentation that keeps users engaged and encourages reading and 
             interaction through a continuous flow.»
@@ -389,7 +455,7 @@
           </ul>
 
 
-          <h4 id="minimal-style">4.4.2 Minimal Style </h4>
+          <h4>3.4.2 Minimal Style </h4>
 
           <p>
               The minimal style relies on <strong>Style</strong> principles (grid rationality, typographic hierarchy, functional asymmetry) 
@@ -441,7 +507,7 @@
     </div>
 
     <div class="section" id="bibliography">
-      <h2 id="sources_heading">5. Bibliography </h2>
+      <h2 id="sources_heading">4. Bibliography </h2>
       <p>Sources list:</p>
 
       <ol class="source_list">
@@ -522,16 +588,17 @@
   </div>
 
     <div class="sidebar">
-    <h3>Project Steps</h3>
-    <a href="#abstract">1. Abstract</a>
-    <a href="#idea">2. Project idea</a>
-    <a href="#goals">3. Goals </a>
-    <a href="#website">4. The website</a>
-    <a href="#bibliography">5. Bibliography</a> 
+    <h3>Documentation index</h3>
+    <a href="#idea">1. Project idea</a>
+    <a href="#items">1.1. Items of the exibition</a>
+    <a href="#work_division">1.2. Work division </a>
+    <a href="#goals">2. Goals </a>
+    <a href="#website">3. The website</a>
+    <a href="#main_page">3.1. The Main page</a>
+    <a href="#map">3.2. The Map</a>
+    <a href="#object">3.3. The Objects </a>
+    <a href="#narrations">3.4. The Narrations</a>
+    <a href="#bibliography">4. Bibliography</a> 
   </div>
 </body>
-
 </html>
-
-
-
