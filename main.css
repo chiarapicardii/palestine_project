@@ -7,8 +7,6 @@ html{
 }
 
 body{
-    background: white;;     
-    justify-content:center;
     padding-top: 60px;
 } 
 
@@ -62,15 +60,13 @@ body{
 }
 
 .footer {
-    position: absolute;
+    position: static;
     box-sizing: border-box;
     background: #111;
     color: #fff;
     padding: 3vw;
     margin-top: 5vw;
     width: 100%;
-    align-items: stretch;
-    margin-left: -1%;
 }
 
 .disclaimer{
@@ -80,4 +76,20 @@ body{
 .copyright{
     position: absolute;
     font-size: x-small
+}
+
+@media (max-width: 600px) {
+    .navbar {
+    padding: 0 12px;
+    }
+
+    .navbar .left,
+    .navbar .right {
+    gap: 10px;
+    }
+
+    .navbar a {
+    font-size: 0.7rem;
+    font-weight: 600;
+    }
 }
