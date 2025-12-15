@@ -197,5 +197,24 @@ li {
   margin-top: 0;
 }
 
+@media (max-width: 600px) {
+      .container { padding: calc(var(--navbar-h) + 24px) 16px 60px; }
+      .arrow-left { left: 12px; }
+      .arrow-right { right: 12px; }
+      .navbar {
+      padding: 0 12px;
+      }
+
+      .navbar .left,
+      .navbar .right {
+      gap: 10px;
+      }
+
+      .navbar a {
+      font-size: 0.7rem;
+      font-weight: 600;
+      }
+}
+
 
 
