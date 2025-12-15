@@ -9,7 +9,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 18px;           
   line-height: 1.7;
 }
@@ -196,3 +196,4 @@ a:focus {
   margin-top: 40px;
   font-size: 0.95rem;
 }
+
