@@ -46,8 +46,9 @@ body {
 
 
 .container {
+  width: 1200px;
+  max-width: calc(100% - 120px);
   padding: calc(var(--navbar-h) + 40px) 40px 60px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -195,4 +196,5 @@ li {
   padding: 20px;
   margin-top: 0;
 }
+
 
