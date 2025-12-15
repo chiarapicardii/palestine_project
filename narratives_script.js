@@ -6,36 +6,31 @@ const themeFiles = {
 }
 
 const themeLink = document.getElementById("themeStyle");
-const defaultThemeKey = 'default'; // default style
+const defaultThemeKey = 'minimal'; // default style
 
 function applyTheme(key) {
-    if (!key || key == defaultThemeKey) { //First case: the theme is the default one
-        themeLink.disabled = true; 
-        themeLink.setAttribute("href", "");
-        localStorage.setItem("selectedTheme", defaultThemeKey);
-        console.log("This is the default theme")
-        return 
-    }
+    const themeToApply = themeFiles[key] ? key : defaultThemeKey; 
 
-    const href = themeFiles[key] || ""; 
+    const href = themeFiles[themeToApply]
+
     if (href) {
-        themeLink.setAttribute("href", href); 
+        themeLink.setAttribute("href", href);
         themeLink.disabled = false; 
 
-        localStorage.setItem("selectedTheme", key); 
-        console.log("You chose the theme: " + key); 
-    } else {
-        themeLink.disabled = true; 
-        console.log("Something went wrong :(")
+        localStorage.setItem("selectedTheme", themeToApply);
+        return;
     }
+
+    console.error("Error: theme not found");
+    themeLink.disabled = true;
 }
 
 function applySavedTheme(){
     const savedTheme = localStorage.getItem("selectedTheme") || defaultThemeKey;
-    applyTheme(savedTheme);
+    applyTheme(savedTheme); 
 
     const selector = document.getElementById("themeSelector");
-    if (selector) {
+    if (selector){
         selector.value = savedTheme
     }
 }
@@ -51,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         rootMargin: "0px 0px -50px 0px"
     }; 
 
-    const observerCallback = (entries, observer) => {
+    const observerCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting){
                 entry.target.classList.remove("is_hidden"); 
