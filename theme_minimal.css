@@ -3,7 +3,7 @@ https://www.pixeldarts.com/post/swiss-style-web-design-a-comprehensive-guide) e 
 
 body {
     color: black;
-    background-color:  rgb(219, 217, 217);
+    background-color: #DBD9D9;
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
@@ -25,7 +25,7 @@ h2{
 }
 
 .navbar {
-    background-color: rgb(219, 217, 217);
+    background-color: #DBD9D9;
 }
 
 .navbar a { 
@@ -39,7 +39,7 @@ h2{
 }
 
 #themeSelector {
-    background: rgb(219, 217, 217);
+    background: #DBD9D9;
     color: white;
     border-color: #017609;
 }
@@ -67,13 +67,12 @@ h2{
 
 #erasure,
 #resistance{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
-        width: 95%;
-        gap: 1vw;
-
-        align-items: start;
-    }  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    width: 95%;
+    gap: 1vw;
+    align-items: start;
+}  
 
 .erasure_img, /*to avoid repeting the same properties i apply it to all timeline and story one */
 .resistent_img, 
@@ -119,8 +118,6 @@ figcaption:hover {
 }
 
 .timeline_item {
-    /* Impedisce agli elementi di rimpicciolirsi quando lo spazio si esaurisce */
-    flex-shrink: 0; 
     position: relative;
     
     width: 250px; 
@@ -144,7 +141,7 @@ figcaption:hover {
     padding: 1vw; 
     width: fit-content;
     opacity: 0; 
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .timeline_figure:hover .overlay_content {
@@ -210,7 +207,7 @@ section#disclaimer {
         margin-left: 0;
         margin-right: 0;
         padding-left: 2vw;
-    }  
+    }
 
     .erasure_img, 
     .resistent_img{
@@ -229,7 +226,7 @@ section#disclaimer {
     }
     
     .timeline_item {
-        width: 350px; 
+        max-width: 350px; 
         margin-right: 40px; 
     }
     

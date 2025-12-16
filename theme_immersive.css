@@ -10,8 +10,8 @@ body {
 
 
 .navbar {
-        background-color: black;
-        }
+    background-color: black;
+}
 
 
 #themeSelector {
@@ -62,7 +62,7 @@ h3{
     width: 15vw;
     height: 10vw;
     cursor: pointer; 
-    animation: pointing 2s ease-out;
+    animation: 2s ease-out;
 }
 
 #down_arrow img{
@@ -257,4 +257,3 @@ a.overlay_button:hover {
         width: 90%; 
     }
 }
-
