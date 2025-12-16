@@ -163,7 +163,6 @@ h3{
 }
 
 #chronological_timeline {
-    position: relative;
     width: 90%;
     margin: auto;
     position: relative;
@@ -184,6 +183,7 @@ h3{
 
 .timeline_figure img{
     width: 70%;
+    height: 90vh;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -257,3 +257,4 @@ a.overlay_button:hover {
         width: 90%; 
     }
 }
+
