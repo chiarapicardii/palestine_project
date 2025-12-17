@@ -21,16 +21,6 @@ html, body {
     .navbar a{ text-decoration:none; color: #c8102e; font-weight:bold; }
     .navbar .center a{ color:#222; }
 
-  header {
-    
-    .image-overlay-container {
-    position: relative;
-    display: inline-block; 
-    cursor: pointer;
-    overflow: hidden; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-}
 
   main {
     max-width: 1200px;
