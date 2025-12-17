@@ -42,9 +42,9 @@ const items = [
  
   { x: 642, y: 341, 
     nome: "War and Peace",
-    date:"",
-    author:"",
-    collection:"",
+    date:"N/D",
+    author:"Fatima al-Muhib",
+    collection:"The Omar al-Jallad Collection / The Omar al-Jallad Sub-collection 2: Documents",
   },
   
   { x: 614, y: 566, 
