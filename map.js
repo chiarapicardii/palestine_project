@@ -195,7 +195,7 @@ function updateSidePanel(item, index) {
 }
 
 
-
+// Aggiunge i marker e il listener di click
 items.forEach((p, i) => {
   const marker = L.marker([p.y, p.x]).addTo(map);
 
