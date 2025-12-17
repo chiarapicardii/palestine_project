@@ -24,7 +24,7 @@
       line-height: 1.5;
     }
 
-    /* Sticky Navigation bar */
+    /* navigation bar */
     .navbar {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -81,7 +81,7 @@
     .metadata { margin: 0 0 20px; padding-left: 18px; }
     .metadata li { margin-bottom: 6px; }
 
-    /* Accordion section below everything */
+    /* accordion section */
     .accordion-section {
       margin-top: var(--content-gap);
     }
@@ -128,7 +128,7 @@
       display: block;
     }
 
-    /* Red navigating triangles */
+    /* navigating triangles */
     .arrow-left::before { content: "◀"; }
     .arrow-right::before { content: "▶"; }
 
@@ -199,7 +199,7 @@
     <!-- image and metadata -->
     <section class="item-section">
       <figure class="item-image">
-        <img src="imgs/my-image.jpg" alt="Item Image" />
+        <img src="imgs/my-image.jpg" />
       </figure>
 
       <div class="item-details">
@@ -254,7 +254,6 @@
   </footer>
 
   <script>
-    // items
     const items = [
       {
         image: "imgs/my-image.jpg",
@@ -498,7 +497,7 @@
       }
     ];
 
-    // theme file per accordion key
+
     const themeFiles = {
       young_visitor: "young.css",
       adult_visitor:  "adult.css",
@@ -564,12 +563,11 @@
     function updateItemDisplay() {
       const item = items[currentIndex];
 
-      // Image & title
+  
       imgEl.src = item.image;
-      imgEl.alt = item.title || "Item image";
       titleEl.textContent = item.title || "Untitled";
 
-      // Metadata
+  
       metaList.innerHTML = "";
       (item.metadata || []).forEach(entry => {
         const li = document.createElement("li");
@@ -577,7 +575,7 @@
         metaList.appendChild(li);
       });
 
-      // Accordion for this item
+      // accordion for this item
       renderAccordionContent();
     }
 
@@ -596,7 +594,7 @@
       renderAccordionContent();
     }
 
-    // Accordion interactions
+    // accordion interactions
     accordionEl.addEventListener("click", (e) => {
       const header = e.target.closest(".accordion-header");
       if (!header) return;
@@ -611,17 +609,17 @@
 
     // Red triangles (keyboard)
     document.querySelector(".arrow-left").addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showPrevItem(); }
+      if (e.key === "Enter") { e.preventDefault(); showPrevItem(); }
     });
     document.querySelector(".arrow-right").addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showNextItem(); }
+      if (e.key === "Enter") { e.preventDefault(); showNextItem(); }
     });
 
-    // Init
     updateItemDisplay();
   </script>
 </body>
 </html>
+
 
 
 
